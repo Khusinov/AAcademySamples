@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">A+ Academy Samples</string>
+    <string name="writing_samples">Writing Samples</string>
+    <string name="a_academy">A+ Academy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.aacademysamples.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_taskOneFragment"
+            app:destination="@id/taskOneFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_taskTwoFragment"
+            app:destination="@id/taskTwoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tipsFragment"
+            app:destination="@id/tipsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mistakesFragment"
+            app:destination="@id/mistakesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mistakesFragment"
+        android:name="com.example.aacademysamples.ui.mistakes.MistakesFragment"
+        android:label="fragment_mistakes"
+        tools:layout="@layout/fragment_mistakes" >
+        <action
+            android:id="@+id/action_mistakesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskOneFragment"
+        android:name="com.example.aacademysamples.ui.task1.TaskOneFragment"
+        android:label="fragment_task1"
+        tools:layout="@layout/fragment_task1" >
+        <action
+            android:id="@+id/action_taskOneFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskTwoFragment"
+        android:name="com.example.aacademysamples.ui.task2.TaskTwoFragment"
+        android:label="fragment_task_two"
+        tools:layout="@layout/fragment_task_two" >
+        <action
+            android:id="@+id/action_taskTwoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipsFragment"
+        android:name="com.example.aacademysamples.ui.tips.TipsFragment"
+        android:label="fragment_tips"
+        tools:layout="@layout/fragment_tips" >
+        <action
+            android:id="@+id/action_tipsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
