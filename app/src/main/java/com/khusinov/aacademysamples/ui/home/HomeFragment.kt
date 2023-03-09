@@ -1,12 +1,12 @@
-package com.example.aacademysamples.ui.home
+package com.khusinov.aacademysamples.ui.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import com.example.aacademysamples.R
-import com.example.aacademysamples.databinding.FragmentHomeBinding
-import com.example.aacademysamples.viewBinding
+import com.khusinov.aacademysamples.R
+import com.khusinov.aacademysamples.databinding.FragmentHomeBinding
+import com.khusinov.aacademysamples.viewBinding
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {

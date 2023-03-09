@@ -1,4 +1,4 @@
-package com.example.aacademysamples
+package com.khusinov.aacademysamples
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,11 +1,8 @@
-package com.example.aacademysamples
+package com.khusinov.aacademysamples
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import com.example.aacademysamples.databinding.ActivityMainBinding
+import com.khusinov.aacademysamples.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding

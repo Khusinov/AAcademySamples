@@ -1,4 +1,4 @@
-package com.example.aacademysamples
+package com.khusinov.aacademysamples
 
 import org.junit.Test
 

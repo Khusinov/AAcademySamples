@@ -48,6 +48,7 @@
 
 
             <ImageView
+                android:id="@+id/icon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="20dp"
@@ -68,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_rv" />
 
     </com.google.android.material.card.MaterialCardView>

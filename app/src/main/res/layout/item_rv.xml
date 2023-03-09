@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="12dp"
+    android:layout_marginHorizontal="2dp"
     android:layout_marginVertical="7.5dp"
     android:orientation="horizontal">
 
@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
+        android:background="@color/white"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:divider="@android:color/transparent"
@@ -23,13 +24,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="horizontal">
 
             <View
                 android:id="@+id/view"
                 android:layout_width="10dp"
                 android:layout_height="match_parent"
-                android:background="#34C142" />
+                android:background="@color/red" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/CardView_number"
@@ -53,9 +55,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="1"
+                        android:text="14"
                         android:textColor="#34C142"
-                        android:textSize="18sp" />
+                        android:textSize="14sp" />
 
                 </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
@@ -65,8 +67,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
                 android:layout_marginVertical="4dp"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView

@@ -1,13 +1,11 @@
-package com.example.aacademysamples
+package com.khusinov.aacademysamples
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.core.content.ContextCompat
-import com.example.aacademysamples.databinding.ActivityMainBinding
-import com.example.aacademysamples.databinding.ActivityWelcomeBinding
+import com.khusinov.aacademysamples.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
 

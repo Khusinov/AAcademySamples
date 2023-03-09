@@ -1,12 +1,12 @@
-package com.example.aacademysamples.ui.task2
+package com.khusinov.aacademysamples.ui.task2
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.aacademysamples.R
-import com.example.aacademysamples.databinding.FragmentTaskTwoBinding
-import com.example.aacademysamples.viewBinding
+import com.khusinov.aacademysamples.R
+import com.khusinov.aacademysamples.databinding.FragmentTaskTwoBinding
+import com.khusinov.aacademysamples.viewBinding
 
 /**
  * A simple [Fragment] subclass.

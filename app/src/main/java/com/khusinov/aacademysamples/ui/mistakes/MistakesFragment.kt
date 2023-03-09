@@ -1,12 +1,12 @@
-package com.example.aacademysamples.ui.mistakes
+package com.khusinov.aacademysamples.ui.mistakes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import com.example.aacademysamples.R
-import com.example.aacademysamples.databinding.FragmentMistakesBinding
-import com.example.aacademysamples.viewBinding
+import com.khusinov.aacademysamples.R
+import com.khusinov.aacademysamples.databinding.FragmentMistakesBinding
+import com.khusinov.aacademysamples.viewBinding
 
 
 class MistakesFragment : Fragment(R.layout.fragment_mistakes) {

@@ -1,4 +1,4 @@
-package com.example.aacademysamples
+package com.khusinov.aacademysamples
 
 import android.view.LayoutInflater
 import android.view.View

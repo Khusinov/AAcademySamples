@@ -1,13 +1,13 @@
-package com.example.aacademysamples.ui.tips
+package com.khusinov.aacademysamples.ui.tips
 
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.aacademysamples.R
-import com.example.aacademysamples.databinding.FragmentTipsBinding
-import com.example.aacademysamples.viewBinding
+import com.khusinov.aacademysamples.R
+import com.khusinov.aacademysamples.databinding.FragmentTipsBinding
+import com.khusinov.aacademysamples.viewBinding
 
 
 class TipsFragment : Fragment(R.layout.fragment_tips) {
