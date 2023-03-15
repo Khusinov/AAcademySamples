@@ -32,7 +32,7 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
-                    Log.d(TAG, "${document.id} => ${document.data}")
+                    Log.d("Galdi bi", "${document.id} => ${document.data}")
 
                     val taskOne = TaskOne()
                     taskOne.body = document.data["body"].toString()
@@ -47,6 +47,8 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
                     // taskOne.date = document.data["date"]
 
                     taskOneList.add(taskOne)
+
+                    callIt(taskOneList)
                 }
             }.addOnFailureListener { exception ->
                 Log.w(TAG, "setupUI: Error getting documents.  ", exception)
@@ -65,13 +67,16 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
                 findNavController().navigate(R.id.action_taskOneFragment_to_taskOneMoreFragment)
             }
 
+        }
+    }
+
+    private fun callIt(taskOneList: ArrayList<TaskOne>) {
+        binding.apply {
             val recyclerView = rv
-            val adapter = TaskOneAdapter()
+            val adapter = TaskOneAdapter(taskOneList)
             recyclerView.adapter = adapter
             adapter.submitList(taskOneList)
-
         }
-
 
     }
 
