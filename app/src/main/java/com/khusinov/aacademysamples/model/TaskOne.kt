@@ -6,7 +6,7 @@ class TaskOne {
     constructor(
         body: String?,
         imageUrl: String?,
-        date: Date?,
+        date: String?,
         sample: String?,
         description: String?,
         vocabulary: String?,
@@ -14,7 +14,8 @@ class TaskOne {
         author: String?,
         score: String?,
         sort: Int?,
-        type: Int?
+        type: Int?,
+        videoUrl:String?
     ) {
         this.body = body
         this.imageUrl = imageUrl
@@ -27,13 +28,14 @@ class TaskOne {
         this.score = score
         this.sort = sort
         this.type = type
+        this.videoUrl = videoUrl
     }
 
     constructor()
     constructor(
         body: String?,
         imageUrl: String?,
-        date: Date?,
+        date: String?,
         sample: String?,
         description: String?,
         vocabulary: String?,
@@ -53,7 +55,7 @@ class TaskOne {
 
     var body: String? = null
     var imageUrl: String? = null
-    var date: Date? = null
+    var date: String? = null
     var sample: String? = null
     var description: String? = null
     var vocabulary: String? = null
@@ -62,5 +64,6 @@ class TaskOne {
     var score: String? = null
     var sort: Int? = null
     var type: Int? = null
+    var videoUrl:String? = null
 
 }

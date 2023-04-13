@@ -1,6 +1,7 @@
 package com.khusinov.aacademysamples.ui.task2
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -31,6 +32,8 @@ class TaskTwoAdapter(val list: List<TaskTwo>) :
                 questionTv.text = questionBody
                 questionDate.text = taskTwo.date.toString()
                 questionId.text = "1"
+
+                view.setBackgroundColor(Color.parseColor("#FF8413"))
 
                 questionBody = taskTwo1[0].body
                 questionTv.text = questionBody

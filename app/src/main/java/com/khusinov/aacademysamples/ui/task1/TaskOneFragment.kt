@@ -43,8 +43,7 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
                     taskOne.sort = document.data["sort"].toString().toInt()
                     taskOne.type = document.data["type"].toString().toInt()
                     taskOne.vocabulary = document.data["vocabulary"].toString()
-
-                    // taskOne.date = document.data["date"]
+                    taskOne.date = document.data["date"].toString()
 
                     taskOneList.add(taskOne)
 
