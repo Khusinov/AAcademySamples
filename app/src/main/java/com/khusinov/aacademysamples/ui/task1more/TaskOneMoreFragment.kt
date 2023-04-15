@@ -5,6 +5,8 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Context.CLIPBOARD_SERVICE
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -52,6 +54,14 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
 
             icBack.setOnClickListener {
                 findNavController().navigate(R.id.action_taskOneMoreFragment_to_taskOneFragment)
+            }
+            imageQuestion.setOnClickListener {
+                if (taskOne.imageUrl != null && taskOne.imageUrl != "") {
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.data = Uri.parse(taskOne.imageUrl)
+                    startActivity(intent)
+                }
+
             }
 
             sample.setOnClickListener {

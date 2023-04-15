@@ -70,7 +70,7 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
             }
 
             icon.setOnClickListener {
-                findNavController().navigate(R.id.action_taskOneFragment_to_taskOneMoreFragment)
+
             }
 
         }
@@ -82,7 +82,7 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
             rv.visibility = View.VISIBLE
 
             val recyclerView = rv
-            val adapter = TaskOneAdapter(taskOneList)
+            val adapter = TaskOneAdapter()
             recyclerView.adapter = adapter
             adapter.submitList(taskOneList)
             adapter.onClick = {

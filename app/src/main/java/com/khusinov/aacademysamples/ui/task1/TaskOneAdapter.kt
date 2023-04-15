@@ -13,7 +13,7 @@ import com.khusinov.aacademysamples.R
 import com.khusinov.aacademysamples.databinding.ItemRvBinding
 import com.khusinov.aacademysamples.model.TaskOne
 
-class TaskOneAdapter(val list: List<TaskOne>) :
+class TaskOneAdapter() :
     RecyclerView.Adapter<TaskOneAdapter.TaskOneViewHolder>() {
 
     private val TAG = "TaskOneAdapter"
@@ -28,7 +28,6 @@ class TaskOneAdapter(val list: List<TaskOne>) :
 
         fun bind() {
             val taskOneCurrent = dif.currentList[adapterPosition]
-            val taskOne1 = list
 
             binding.apply {
                 var questionBody = taskOneCurrent.sample
@@ -38,15 +37,6 @@ class TaskOneAdapter(val list: List<TaskOne>) :
                 questionTv.text = firstWords
                 questionDate.text = taskOneCurrent.date
                 view.setBackgroundColor(Color.RED)
-
-                // share to next page
-                questionBody = taskOneCurrent.sample!!
-                var imageUrl = taskOneCurrent.imageUrl
-                var bandScore = taskOneCurrent.score
-                var author = taskOneCurrent.author
-                var vocab = taskOneCurrent.vocabulary
-                var videoUrl = taskOneCurrent.grammar
-
 
                 Log.d(TAG, "bind: ${taskOneCurrent.date}")
 

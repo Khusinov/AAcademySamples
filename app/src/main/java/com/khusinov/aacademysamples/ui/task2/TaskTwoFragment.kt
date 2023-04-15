@@ -3,6 +3,7 @@ package com.khusinov.aacademysamples.ui.task2
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.firestore.ktx.firestore
@@ -28,6 +29,9 @@ class TaskTwoFragment : Fragment(R.layout.fragment_task_two) {
     private fun setupUI() {
 
         val taskTwoList = ArrayList<TaskTwo>()
+        binding.pBar.visibility = View.VISIBLE
+        binding.rv.visibility = View.GONE
+
 
         val db = Firebase.firestore
         db.collection("question")
@@ -36,17 +40,20 @@ class TaskTwoFragment : Fragment(R.layout.fragment_task_two) {
                 for (document in result) {
                     Log.d("Galdi bi", "${document.id} => ${document.data}")
 
-                    val taskTwo = TaskTwo()
-                    taskTwo.body = document.data["body"].toString()
-                    taskTwo.description = document.data["description"].toString()
-                    taskTwo.imageUrl = document.data["imageUrl"].toString()
-                    taskTwo.sample = document.data["sample"].toString()
-                    taskTwo.ideas = document.data["ideas"].toString()
-                    taskTwo.sort = document.data["sort"].toString().toInt()
-                    taskTwo.type = document.data["type"].toString().toInt()
-                    taskTwo.vocabulary = document.data["vocabulary"].toString()
-
-                    // taskOne.date = document.data["date"]
+                    val taskTwo = TaskTwo(
+                        document.data["body"].toString(),
+                        document.data["imageUrl"].toString(),
+                        document.data["date"].toString(),
+                        document.data["sample"].toString(),
+                        document.data["description"].toString(),
+                        document.data["vocabulary"].toString(),
+                        document.data["ideas"].toString(),
+                        document.data["author"].toString(),
+                        document.data["score"].toString(),
+                        document.data["sort"].toString().toInt(),
+                        document.data["type"].toString().toInt(),
+                        document.data["grammar"].toString(),
+                    )
 
                     taskTwoList.add(taskTwo)
 
@@ -56,11 +63,6 @@ class TaskTwoFragment : Fragment(R.layout.fragment_task_two) {
                 Log.w(TAG, "setupUI: Error getting documents.  ", exception)
 
             }
-
-
-
-
-
 
         requireActivity().window.statusBarColor = requireContext().getColor(R.color.yellow)
 
@@ -74,10 +76,17 @@ class TaskTwoFragment : Fragment(R.layout.fragment_task_two) {
 
     private fun callIt(taskTwoList: ArrayList<TaskTwo>) {
         binding.apply {
+            pBar.visibility = View.GONE
+            rv.visibility = View.VISIBLE
+
             val recyclerView = rv
-            val adapter = TaskTwoAdapter(taskTwoList)
+            val adapter = TaskTwoAdapter()
             recyclerView.adapter = adapter
             adapter.submitList(taskTwoList)
+
+            adapter.onClick = {
+                findNavController().navigate(R.id.action_taskTwoFragment_to_taskTwoMoreFragment, bundleOf("task" to it))
+            }
         }
     }
 

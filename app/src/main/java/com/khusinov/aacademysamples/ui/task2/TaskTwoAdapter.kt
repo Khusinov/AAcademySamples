@@ -8,36 +8,43 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.khusinov.aacademysamples.R
 import com.khusinov.aacademysamples.databinding.ItemRvBinding
 import com.khusinov.aacademysamples.model.TaskOne
 import com.khusinov.aacademysamples.model.TaskTwo
+import kotlin.coroutines.coroutineContext
 
-class TaskTwoAdapter(val list: List<TaskTwo>) :
+class TaskTwoAdapter() :
     RecyclerView.Adapter<TaskTwoAdapter.TaskTwoViewHolder>() {
 
     private val TAG = "TaskTwoAdapter"
 
     private val dif = AsyncListDiffer(this, ITEM_DIFF)
 
+    var onClick: ((TaskTwo) -> Unit)? = null
+
     inner class TaskTwoViewHolder(private val binding: ItemRvBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind() {
-            val taskTwo = dif.currentList[adapterPosition]
-            val taskTwo1 = list
+            val taskTwoCurrent = dif.currentList[adapterPosition]
 
             binding.apply {
-                Log.d("Adapter 1", "bind: Adapter called")
-                var questionBody = taskTwo.body
-                questionBody = questionBody!!.substring(0, 30)
-                questionTv.text = questionBody
-                questionDate.text = taskTwo.date.toString()
-                questionId.text = "1"
+                var questionBody = taskTwoCurrent.sample
+                var firstWords = getFirstWordsUsingSubString(questionBody!!)
 
+                questionId.text = "${adapterPosition + 1}"
+                questionTv.text = firstWords
+                questionDate.text = taskTwoCurrent.date
                 view.setBackgroundColor(Color.parseColor("#FF8413"))
 
-                questionBody = taskTwo1[0].body
-                questionTv.text = questionBody
-                questionDate.text = taskTwo1[0].date.toString()
+                Log.d(TAG, "bind: ${taskTwoCurrent.date}")
+
+                binding.root.setOnClickListener {
+                    Log.d(TAG, "bind: clicled")
+                    onClick?.invoke(taskTwoCurrent)
+
+
+                }
 
             }
         }
@@ -54,6 +61,10 @@ class TaskTwoAdapter(val list: List<TaskTwo>) :
 
     fun submitList(list: List<TaskTwo>) {
         dif.submitList(list)
+    }
+
+    fun getFirstWordsUsingSubString(input: String): String? {
+        return input.split(" ").take(7).joinToString(" ") + "..."
     }
 
     companion object {
