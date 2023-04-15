@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -26,6 +27,8 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
     private fun setupUI() {
 
         val taskOneList = ArrayList<TaskOne>()
+        binding.pBar.visibility = View.VISIBLE
+        binding.rv.visibility = View.GONE
 
         val db = Firebase.firestore
         db.collection("question")
@@ -34,16 +37,20 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
                 for (document in result) {
                     Log.d("Galdi bi", "${document.id} => ${document.data}")
 
-                    val taskOne = TaskOne()
-                    taskOne.body = document.data["body"].toString()
-                    taskOne.description = document.data["description"].toString()
-                    taskOne.imageUrl = document.data["imageUrl"].toString()
-                    taskOne.sample = document.data["sample"].toString()
-                    taskOne.ideas = document.data["ideas"].toString()
-                    taskOne.sort = document.data["sort"].toString().toInt()
-                    taskOne.type = document.data["type"].toString().toInt()
-                    taskOne.vocabulary = document.data["vocabulary"].toString()
-                    taskOne.date = document.data["date"].toString()
+                    val taskOne = TaskOne(
+                    document.data["body"].toString(),
+                    document.data["imageUrl"].toString(),
+                    document.data["date"].toString(),
+                    document.data["sample"].toString(),
+                    document.data["description"].toString(),
+                    document.data["vocabulary"].toString(),
+                    document.data["ideas"].toString(),
+                    document.data["author"].toString(),
+                    document.data["score"].toString(),
+                    document.data["sort"].toString().toInt(),
+                    document.data["type"].toString().toInt(),
+                    document.data["grammar"].toString(),
+                    )
 
                     taskOneList.add(taskOne)
 
@@ -71,10 +78,16 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
 
     private fun callIt(taskOneList: ArrayList<TaskOne>) {
         binding.apply {
+            pBar.visibility = View.GONE
+            rv.visibility = View.VISIBLE
+
             val recyclerView = rv
             val adapter = TaskOneAdapter(taskOneList)
             recyclerView.adapter = adapter
             adapter.submitList(taskOneList)
+            adapter.onClick = {
+                findNavController().navigate(R.id.action_taskOneFragment_to_taskOneMoreFragment, bundleOf("task" to it))
+            }
         }
 
     }

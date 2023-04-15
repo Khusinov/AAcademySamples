@@ -1,69 +1,22 @@
 package com.khusinov.aacademysamples.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 import java.util.Date
 
-class TaskOne {
-    constructor(
-        body: String?,
-        imageUrl: String?,
-        date: String?,
-        sample: String?,
-        description: String?,
-        vocabulary: String?,
-        ideas: String?,
-        author: String?,
-        score: String?,
-        sort: Int?,
-        type: Int?,
-        videoUrl:String?
-    ) {
-        this.body = body
-        this.imageUrl = imageUrl
-        this.date = date
-        this.sample = sample
-        this.description = description
-        this.vocabulary = vocabulary
-        this.ideas = ideas
-        this.author = author
-        this.score = score
-        this.sort = sort
-        this.type = type
-        this.videoUrl = videoUrl
-    }
-
-    constructor()
-    constructor(
-        body: String?,
-        imageUrl: String?,
-        date: String?,
-        sample: String?,
-        description: String?,
-        vocabulary: String?,
-        ideas: String?,
-        author: String?
-    ) {
-        this.body = body
-        this.imageUrl = imageUrl
-        this.date = date
-        this.sample = sample
-        this.description = description
-        this.vocabulary = vocabulary
-        this.ideas = ideas
-        this.author = author
-    }
-
-
-    var body: String? = null
-    var imageUrl: String? = null
-    var date: String? = null
-    var sample: String? = null
-    var description: String? = null
-    var vocabulary: String? = null
-    var ideas: String? = null
-    var author: String? = null
-    var score: String? = null
-    var sort: Int? = null
-    var type: Int? = null
-    var videoUrl:String? = null
-
+@Parcelize
+class TaskOne(
+    var body: String?,
+    var imageUrl: String?,
+    var date: String?,
+    var sample: String?,
+    var description: String?,
+    var vocabulary: String?,
+    var ideas: String?,
+    var author: String?,
+    var score: String?,
+    var sort: Int?,
+    var type: Int?,
+    var grammar:String?
+): Parcelable {
 }

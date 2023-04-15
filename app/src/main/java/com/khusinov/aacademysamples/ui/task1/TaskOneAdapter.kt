@@ -20,14 +20,18 @@ class TaskOneAdapter(val list: List<TaskOne>) :
 
     private val dif = AsyncListDiffer(this, ITEM_DIFF)
 
+    var onClick: ((TaskOne) -> Unit)? = null
+
     inner class TaskOneViewHolder(private val binding: ItemRvBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+
         fun bind() {
             val taskOneCurrent = dif.currentList[adapterPosition]
             val taskOne1 = list
 
             binding.apply {
-                var questionBody = taskOneCurrent.body
+                var questionBody = taskOneCurrent.sample
                 var firstWords = getFirstWordsUsingSubString(questionBody!!)
 
                 questionId.text = "${adapterPosition + 1}"
@@ -36,19 +40,20 @@ class TaskOneAdapter(val list: List<TaskOne>) :
                 view.setBackgroundColor(Color.RED)
 
                 // share to next page
-                questionBody = taskOneCurrent.body!!
+                questionBody = taskOneCurrent.sample!!
                 var imageUrl = taskOneCurrent.imageUrl
                 var bandScore = taskOneCurrent.score
                 var author = taskOneCurrent.author
                 var vocab = taskOneCurrent.vocabulary
-                var videoUrl = taskOneCurrent.videoUrl
+                var videoUrl = taskOneCurrent.grammar
 
 
                 Log.d(TAG, "bind: ${taskOneCurrent.date}")
 
                 binding.root.setOnClickListener {
-                    var intent = Intent()
-                    intent.putExtra("questionBody" , questionBody)
+                    Log.d(TAG, "bind: clicled")
+                    onClick?.invoke(taskOneCurrent)
+
 
                 }
 

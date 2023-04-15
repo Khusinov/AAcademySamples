@@ -42,7 +42,11 @@
             app:destination="@id/homeFragment" />
         <action
             android:id="@+id/action_taskOneFragment_to_taskOneMoreFragment"
-            app:destination="@id/taskOneMoreFragment" />
+            app:destination="@id/taskOneMoreFragment">
+            <argument
+                android:name="task"
+                app:argType="com.khusinov.aacademysamples.model.TaskOne" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/taskTwoFragment"
