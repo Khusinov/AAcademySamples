@@ -38,24 +38,24 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
                     Log.d("Galdi bi", "${document.id} => ${document.data}")
 
                     val taskOne = TaskOne(
-                    document.data["body"].toString(),
-                    document.data["imageUrl"].toString(),
-                    document.data["date"].toString(),
-                    document.data["sample"].toString(),
-                    document.data["description"].toString(),
-                    document.data["vocabulary"].toString(),
-                    document.data["ideas"].toString(),
-                    document.data["author"].toString(),
-                    document.data["score"].toString(),
-                    document.data["sort"].toString().toInt(),
-                    document.data["type"].toString().toInt(),
-                    document.data["grammar"].toString(),
+                        document.data["body"].toString(),
+                        document.data["imageUrl"].toString(),
+                        document.data["date"].toString(),
+                        document.data["sample"].toString(),
+                        document.data["description"].toString(),
+                        document.data["vocabulary"].toString(),
+                        document.data["ideas"].toString(),
+                        document.data["author"].toString(),
+                        document.data["score"].toString(),
+                        document.data["sort"].toString().toInt(),
+                        document.data["type"].toString().toInt(),
+                        document.data["grammar"].toString(),
                     )
 
                     taskOneList.add(taskOne)
-
-                    callIt(taskOneList)
                 }
+                callIt(taskOneList)
+
             }.addOnFailureListener { exception ->
                 Log.w(TAG, "setupUI: Error getting documents.  ", exception)
 
@@ -86,7 +86,10 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
             recyclerView.adapter = adapter
             adapter.submitList(taskOneList)
             adapter.onClick = {
-                findNavController().navigate(R.id.action_taskOneFragment_to_taskOneMoreFragment, bundleOf("task" to it))
+                findNavController().navigate(
+                    R.id.action_taskOneFragment_to_taskOneMoreFragment,
+                    bundleOf("task" to it)
+                )
             }
         }
 
