@@ -42,6 +42,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 "Hey, Check out this great app: https://play.google.com/store/apps/details?id=uz.khusinov.aacademysamples"
             )
             intent.type = "text/plain"
+            //
             startActivity(Intent.createChooser(intent, "Share To:"))
         }
     }
