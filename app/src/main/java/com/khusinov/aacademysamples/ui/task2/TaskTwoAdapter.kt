@@ -33,7 +33,7 @@ class TaskTwoAdapter() :
                 var firstWords = getFirstWordsUsingSubString(questionBody!!)
 
                 questionId.text = "${adapterPosition + 1}"
-                questionTv.text = firstWords
+                questionTv.text = taskTwoCurrent.question
                 questionDate.text = taskTwoCurrent.date
                 view.setBackgroundColor(Color.parseColor("#FF8413"))
 

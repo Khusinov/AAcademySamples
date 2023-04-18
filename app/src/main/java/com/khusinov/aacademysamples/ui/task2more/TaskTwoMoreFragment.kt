@@ -60,12 +60,14 @@ class TaskTwoMoreFragment : Fragment(R.layout.fragment_task_two_more) {
 
             sample.setOnClickListener {
                 // data
+                question.text = taskTwo.question
                 authorName.text = taskTwo.author
                 bandScore.text = taskTwo.score
                 fullAnswer.text = taskTwo.sample
                 if (taskTwo.imageUrl != null && taskTwo.imageUrl != "") Picasso.get()
                     .load(taskTwo.imageUrl).into(imageQuestion)
                 //view
+                question.visibility = View.VISIBLE
                 copyBtnLv.visibility = View.VISIBLE
                 bandScoreLv.visibility = View.VISIBLE
                 author.visibility = View.VISIBLE
@@ -75,6 +77,7 @@ class TaskTwoMoreFragment : Fragment(R.layout.fragment_task_two_more) {
                 //data
                 fullAnswer.text = taskTwo.vocabulary
                 // view
+                question.visibility = View.GONE
                 copyBtnLv.visibility = View.GONE
                 bandScoreLv.visibility = View.GONE
                 author.visibility = View.GONE
@@ -84,6 +87,7 @@ class TaskTwoMoreFragment : Fragment(R.layout.fragment_task_two_more) {
                 //data
                 fullAnswer.text = taskTwo.grammar
                 // view
+                question.visibility = View.GONE
                 copyBtnLv.visibility = View.GONE
                 bandScoreLv.visibility = View.GONE
                 author.visibility = View.GONE

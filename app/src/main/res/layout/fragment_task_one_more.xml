@@ -149,6 +149,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratmedium"
+                    android:justificationMode="none"
+                    android:textStyle="bold"
+                    android:text="Nowadays most people think that there should be health balance while others think that?"
+                    android:textColor="@color/red"
+                    android:textSize="22sp"
+                    android:layout_marginBottom="22sp"
+                    android:visibility="visible"/>
+
 
                 <TextView
                     android:id="@+id/fullAnswer"

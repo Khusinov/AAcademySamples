@@ -26,6 +26,10 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
     }
 
     private fun setupUI() {
+
+        binding.pBar.visibility = View.VISIBLE
+        binding.rv.visibility = View.GONE
+
         requireActivity().window.statusBarColor = requireContext().getColor(R.color.green)
 
         binding.apply {
@@ -48,15 +52,26 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
                     tipList.add(tip)
 
                 }
-                callIt()
+                callIt(tipList)
             }.addOnFailureListener { exception ->
                 Log.w(TAG, "setupUI: Error getting documents.  ", exception)
             }
         }
     }
 
-    private fun callIt() {
+    private fun callIt(list: List<Tip>) {
 
+
+        binding.apply {
+            pBar.visibility = View.GONE
+            rv.visibility = View.VISIBLE
+
+            val recyclerView = rv
+            var adapter = TipsAdapter()
+            recyclerView.adapter = adapter
+            adapter.submitList(list)
+
+        }
     }
 
 

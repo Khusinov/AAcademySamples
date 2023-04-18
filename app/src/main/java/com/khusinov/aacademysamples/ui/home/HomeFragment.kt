@@ -1,5 +1,6 @@
 package com.khusinov.aacademysamples.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -32,6 +33,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
         binding.commonMistakes.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_mistakesFragment)
+        }
+        binding.shareBtn.setOnClickListener {
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND
+            intent.putExtra(
+                Intent.EXTRA_TEXT,
+                "Hey, Check out this great app: https://play.google.com/store/apps/details?id=uz.khusinov.aacademysamples"
+            )
+            intent.type = "text/plain"
+            startActivity(Intent.createChooser(intent, "Share To:"))
         }
     }
 

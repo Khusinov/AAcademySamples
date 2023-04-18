@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="12dp"
+    android:paddingHorizontal="0dp"
+    android:background="@color/white"
     android:layout_marginVertical="7.5dp"
     android:orientation="horizontal">
 
@@ -11,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
+        android:background="@color/white"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:divider="@android:color/transparent"
@@ -23,7 +25,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:background="@color/white"
+            android:layout_marginVertical="0dp"
             android:orientation="horizontal">
 
             <View
@@ -53,6 +56,7 @@
                     android:id="@+id/imageTip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
                     android:visibility="visible"
                     android:src="@drawable/image1" />
 

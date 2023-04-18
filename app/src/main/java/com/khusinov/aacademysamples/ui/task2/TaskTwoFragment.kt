@@ -34,7 +34,7 @@ class TaskTwoFragment : Fragment(R.layout.fragment_task_two) {
 
 
         val db = Firebase.firestore
-        db.collection("question")
+        db.collection("question2")
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
@@ -45,7 +45,7 @@ class TaskTwoFragment : Fragment(R.layout.fragment_task_two) {
                         document.data["imageUrl"].toString(),
                         document.data["date"].toString(),
                         document.data["sample"].toString(),
-                        document.data["description"].toString(),
+                        document.data["question"].toString(),
                         document.data["vocabulary"].toString(),
                         document.data["ideas"].toString(),
                         document.data["author"].toString(),

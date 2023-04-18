@@ -46,6 +46,7 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
 
     private fun setupUI() {
         binding.apply {
+            question.text = taskOne.question
             authorName.text = taskOne.author
             bandScore.text = taskOne.score
             fullAnswer.text = taskOne.sample
@@ -66,6 +67,7 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
 
             sample.setOnClickListener {
                 // data
+                question.text = taskOne.question
                 authorName.text = taskOne.author
                 bandScore.text = taskOne.score
                 fullAnswer.text = taskOne.sample
@@ -73,6 +75,7 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
                     .load(taskOne.imageUrl).into(imageQuestion)
                 //view
                 copyBtnLv.visibility = View.VISIBLE
+                question.visibility = View.VISIBLE
                 bandScoreLv.visibility = View.VISIBLE
                 author.visibility = View.VISIBLE
                 imageQuestion.visibility = View.VISIBLE
@@ -81,6 +84,7 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
                 //data
                 fullAnswer.text = taskOne.vocabulary
                 // view
+                question.visibility = View.GONE
                 copyBtnLv.visibility = View.GONE
                 bandScoreLv.visibility = View.GONE
                 author.visibility = View.GONE
@@ -90,6 +94,7 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
                 //data
                 fullAnswer.text = taskOne.grammar
                 // view
+                question.visibility = View.GONE
                 copyBtnLv.visibility = View.GONE
                 bandScoreLv.visibility = View.GONE
                 author.visibility = View.GONE
@@ -111,6 +116,5 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
         myClipboard.setPrimaryClip(clip)
         Toast.makeText(requireActivity(), "Copied", Toast.LENGTH_SHORT).show()
     }
-
 
 }

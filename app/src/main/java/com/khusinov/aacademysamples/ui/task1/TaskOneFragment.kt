@@ -42,7 +42,7 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
                         document.data["imageUrl"].toString(),
                         document.data["date"].toString(),
                         document.data["sample"].toString(),
-                        document.data["description"].toString(),
+                        document.data["question"].toString(),
                         document.data["vocabulary"].toString(),
                         document.data["ideas"].toString(),
                         document.data["author"].toString(),

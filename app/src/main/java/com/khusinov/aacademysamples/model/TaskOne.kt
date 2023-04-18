@@ -10,7 +10,7 @@ class TaskOne(
     var imageUrl: String?,
     var date: String?,
     var sample: String?,
-    var description: String?,
+    var question: String?,
     var vocabulary: String?,
     var ideas: String?,
     var author: String?,

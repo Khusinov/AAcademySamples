@@ -34,7 +34,7 @@ class TaskOneAdapter() :
                 var firstWords = getFirstWordsUsingSubString(questionBody!!)
 
                 questionId.text = "${adapterPosition + 1}"
-                questionTv.text = firstWords
+                questionTv.text = taskOneCurrent.question
                 questionDate.text = taskOneCurrent.date
                 view.setBackgroundColor(Color.RED)
 
