@@ -53,9 +53,6 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
             if (taskOne.imageUrl != null && taskOne.imageUrl != "") Picasso.get()
                 .load(taskOne.imageUrl).into(imageQuestion)
 
-            icBack.setOnClickListener {
-                findNavController().navigate(R.id.action_taskOneMoreFragment_to_taskOneFragment)
-            }
             imageQuestion.setOnClickListener {
                 if (taskOne.imageUrl != null && taskOne.imageUrl != "") {
                     val intent = Intent(Intent.ACTION_VIEW)

@@ -31,9 +31,6 @@ class MistakesFragment : Fragment(R.layout.fragment_mistakes) {
 
         binding.apply {
 
-            icBack.setOnClickListener {
-                findNavController().navigate(R.id.action_mistakesFragment_to_homeFragment)
-            }
         }
 
         val mistakeList = ArrayList<Tip>()

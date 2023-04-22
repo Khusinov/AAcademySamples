@@ -23,6 +23,7 @@
                 android:id="@+id/ic_back"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:visibility="gone"
                 android:src="@drawable/ic_back" />
 
             <LinearLayout
@@ -41,6 +42,7 @@
                     android:fontFamily="@font/montserratmedium"
                     android:gravity="center"
                     android:text="Task 1"
+                    android:layout_marginStart="30dp"
                     android:textColor="@color/white"
                     android:textSize="25sp"
                     android:textStyle="bold" />

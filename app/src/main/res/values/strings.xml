@@ -4,5 +4,18 @@
     <string name="a_academy">A+ Academy</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="sample">The first flow diagram illustrates the process of glass container production, and the second diagram shows steps in the process of recycling used glass. \n\n We can see that glass is made using three main raw materials, and that the manufacturing process consists of four distinct stages. It requires five steps to turn used glass into new glass products.\nAt the first stage in the production of glass, sand, soda ash, limestone and other chemicals are mixed together. Next, this mixture is heated in a glass furnace at approximately 1500°C to produce molten glass. The molten glass can then be shaped, by blowing, to create the end products, namely glass containers.\n\nGlass recycling begins with the collection of used glass products. The collected glass is sorted according to its colour, and then washed in order to remove any impurities. At the fourth stage of recycling, the glass is crushed and melted, and the resulting molten glass can finally be moulded to create new items.</string>>
+    <string name="sample">The first flow diagram illustrates the process of glass container production, and the second diagram shows steps in the process of recycling used glass. \n\n We can see that glass is made using three main raw materials, and that the manufacturing process consists of four distinct stages. It requires five steps to turn used glass into new glass products.\nAt the first stage in the production of glass, sand, soda ash, limestone and other chemicals are mixed together. Next, this mixture is heated in a glass furnace at approximately 1500°C to produce molten glass. The molten glass can then be shaped, by blowing, to create the end products, namely glass containers.\n\nGlass recycling begins with the collection of used glass products. The collected glass is sorted according to its colour, and then washed in order to remove any impurities. At the fourth stage of recycling, the glass is crushed and melted, and the resulting molten glass can finally be moulded to create new items.</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="common_mistakes">Common mistakes</string>
+    >
 </resources>

@@ -22,24 +22,20 @@
         <action
             android:id="@+id/action_homeFragment_to_mistakesFragment"
             app:destination="@id/mistakesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aiFragment"
+            app:destination="@id/aiFragment" />
     </fragment>
     <fragment
         android:id="@+id/mistakesFragment"
         android:name="com.khusinov.aacademysamples.ui.mistakes.MistakesFragment"
         android:label="fragment_mistakes"
-        tools:layout="@layout/fragment_mistakes" >
-        <action
-            android:id="@+id/action_mistakesFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_mistakes" />
     <fragment
         android:id="@+id/taskOneFragment"
         android:name="com.khusinov.aacademysamples.ui.task1.TaskOneFragment"
         android:label="fragment_task1"
         tools:layout="@layout/fragment_task1" >
-        <action
-            android:id="@+id/action_taskOneFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
         <action
             android:id="@+id/action_taskOneFragment_to_taskOneMoreFragment"
             app:destination="@id/taskOneMoreFragment">
@@ -54,9 +50,6 @@
         android:label="fragment_task_two"
         tools:layout="@layout/fragment_task_two" >
         <action
-            android:id="@+id/action_taskTwoFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
             android:id="@+id/action_taskTwoFragment_to_taskTwoMoreFragment"
             app:destination="@id/taskTwoMoreFragment" />
     </fragment>
@@ -64,27 +57,20 @@
         android:id="@+id/tipsFragment"
         android:name="com.khusinov.aacademysamples.ui.tips.TipsFragment"
         android:label="fragment_tips"
-        tools:layout="@layout/fragment_tips" >
-        <action
-            android:id="@+id/action_tipsFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_tips" />
     <fragment
         android:id="@+id/taskOneMoreFragment"
         android:name="com.khusinov.aacademysamples.ui.task1more.TaskOneMoreFragment"
         android:label="fragment_task_one_more"
-        tools:layout="@layout/fragment_task_one_more" >
-        <action
-            android:id="@+id/action_taskOneMoreFragment_to_taskOneFragment"
-            app:destination="@id/taskOneFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_task_one_more" />
     <fragment
         android:id="@+id/taskTwoMoreFragment"
         android:name="com.khusinov.aacademysamples.ui.task2more.TaskTwoMoreFragment"
         android:label="fragment_task_two_more"
-        tools:layout="@layout/fragment_task_two_more" >
-        <action
-            android:id="@+id/action_taskTwoMoreFragment_to_taskTwoFragment"
-            app:destination="@id/taskTwoFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_task_two_more" />
+    <fragment
+        android:id="@+id/aiFragment"
+        android:name="com.khusinov.aacademysamples.AiFragment"
+        android:label="fragment_ai"
+        tools:layout="@layout/fragment_ai" />
 </navigation>

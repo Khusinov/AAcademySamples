@@ -65,9 +65,6 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
 
         binding.apply {
 
-            icBack.setOnClickListener {
-                findNavController().navigate(R.id.action_taskOneFragment_to_homeFragment)
-            }
 
             icon.setOnClickListener {
 

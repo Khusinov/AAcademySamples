@@ -67,10 +67,6 @@ class TaskTwoFragment : Fragment(R.layout.fragment_task_two) {
         requireActivity().window.statusBarColor = requireContext().getColor(R.color.yellow)
 
         binding.apply {
-            icBack.setOnClickListener {
-                findNavController().navigate(R.id.action_taskTwoFragment_to_homeFragment)
-            }
-
         }
     }
 

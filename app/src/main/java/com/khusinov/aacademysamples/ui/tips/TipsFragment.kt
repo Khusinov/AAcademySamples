@@ -34,9 +34,6 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
 
         binding.apply {
 
-            icBack.setOnClickListener {
-                findNavController().navigate(R.id.action_tipsFragment_to_homeFragment)
-            }
 
             val tipList = ArrayList<Tip>()
 

@@ -5,6 +5,10 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.navigation.fragment.findNavController
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.khusinov.aacademysamples.R
 import com.khusinov.aacademysamples.databinding.FragmentHomeBinding
 import com.khusinov.aacademysamples.viewBinding
@@ -19,6 +23,22 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun setupUI() {
+        binding.apply {
+
+
+            MobileAds.initialize(requireContext()) {}
+
+            val mAdView = binding.adView
+            val adRequest = AdRequest.Builder().build()
+            mAdView.loadAd(adRequest)
+
+            val adView = AdView(requireContext())
+            adView.adUnitId = "ca-app-pub-8982515368836053/8205991526"
+
+
+        }
+
+// TODO: Add adView to your view hierarchy.
 
         requireActivity().window.statusBarColor = requireContext().getColor(R.color.white)
 
@@ -39,13 +59,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             intent.action = Intent.ACTION_SEND
             intent.putExtra(
                 Intent.EXTRA_TEXT,
-                "Hey, Check out this great app: https://play.google.com/store/apps/details?id=uz.khusinov.aacademysamples"
+                "Hey, Check out this great app:\nhttps://play.google.com/store/apps/details?id=uz.khusinov.aacademysamples"
             )
             intent.type = "text/plain"
             //
             startActivity(Intent.createChooser(intent, "Share To:"))
         }
+        binding.aiService.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_aiFragment)
+        }
     }
-
 
 }
