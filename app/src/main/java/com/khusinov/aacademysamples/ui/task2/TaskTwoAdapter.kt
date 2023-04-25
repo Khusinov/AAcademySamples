@@ -70,7 +70,7 @@ class TaskTwoAdapter() :
     companion object {
         private val ITEM_DIFF = object : DiffUtil.ItemCallback<TaskTwo>() {
             override fun areItemsTheSame(oldItem: TaskTwo, newItem: TaskTwo): Boolean =
-                oldItem.body == newItem.body
+                oldItem.sample == newItem.sample
 
             @SuppressLint("DiffUtilEquals")
             override fun areContentsTheSame(oldItem: TaskTwo, newItem: TaskTwo): Boolean =

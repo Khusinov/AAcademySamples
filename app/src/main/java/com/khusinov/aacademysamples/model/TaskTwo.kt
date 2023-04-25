@@ -7,17 +7,13 @@ import java.util.*
 @Parcelize
 class TaskTwo(
 
-    var body: String?,
     var imageUrl: String?,
     var date: String?,
     var sample: String?,
     var question: String?,
     var vocabulary: String?,
-    var ideas: String?,
     var author: String?,
     var score: String?,
-    var sort: Int?,
-    var type: Int?,
     var grammar: String?
 ) : Parcelable {
 }

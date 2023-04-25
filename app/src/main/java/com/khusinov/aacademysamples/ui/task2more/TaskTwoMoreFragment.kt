@@ -100,7 +100,7 @@ class TaskTwoMoreFragment : Fragment(R.layout.fragment_task_two_more) {
     }
 
     private fun textCopyThenPost(textCopied: String) {
-        var myClipboard =
+        val myClipboard =
             ContextCompat.getSystemService(
                 requireContext(),
                 ClipboardManager::class.java

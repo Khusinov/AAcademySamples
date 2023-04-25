@@ -41,17 +41,13 @@ class TaskTwoFragment : Fragment(R.layout.fragment_task_two) {
                     Log.d("Galdi bi", "${document.id} => ${document.data}")
 
                     val taskTwo = TaskTwo(
-                        document.data["body"].toString(),
                         document.data["imageUrl"].toString(),
                         document.data["date"].toString(),
                         document.data["sample"].toString(),
                         document.data["question"].toString(),
                         document.data["vocabulary"].toString(),
-                        document.data["ideas"].toString(),
                         document.data["author"].toString(),
                         document.data["score"].toString(),
-                        document.data["sort"].toString().toInt(),
-                        document.data["type"].toString().toInt(),
                         document.data["grammar"].toString(),
                     )
 
