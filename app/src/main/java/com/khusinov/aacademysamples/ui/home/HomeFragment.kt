@@ -68,6 +68,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.aiService.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_aiFragment)
         }
+        binding.menu.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_aboutUsFragment)
+        }
     }
 
     private fun admob() {

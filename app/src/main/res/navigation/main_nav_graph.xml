@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_homeFragment_to_aiFragment"
             app:destination="@id/aiFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
     </fragment>
     <fragment
         android:id="@+id/mistakesFragment"
@@ -73,4 +76,9 @@
         android:name="com.khusinov.aacademysamples.AiFragment"
         android:label="fragment_ai"
         tools:layout="@layout/fragment_ai" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.khusinov.aacademysamples.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
 </navigation>
