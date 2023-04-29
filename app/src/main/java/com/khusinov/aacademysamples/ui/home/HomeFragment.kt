@@ -34,6 +34,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 //
 //            val adView = AdView(requireContext())
 //            adView.adUnitId = "ca-app-pub-8982515368836053/8205991526"
+            //
 
 
         }
