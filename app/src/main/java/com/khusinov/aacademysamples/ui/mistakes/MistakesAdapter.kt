@@ -23,7 +23,7 @@ class MistakesAdapter : RecyclerView.Adapter<MistakesAdapter.MistakesViewHolder>
         fun bind() {
             binding.apply {
                 val mistakeCurrent = diff.currentList[adapterPosition]
-                view.setBackgroundColor(Color.parseColor("#5F45FF"))
+                // view.setBackgroundColor(Color.parseColor("#5F45FF"))
 
                 tipId.text = "${adapterPosition + 1}"
                 textview.text = mistakeCurrent.tipBody

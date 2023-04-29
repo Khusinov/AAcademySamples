@@ -27,7 +27,7 @@ class MistakesFragment : Fragment(R.layout.fragment_mistakes) {
         binding.pBar.visibility = View.VISIBLE
         binding.rv.visibility = View.GONE
 
-        requireActivity().window.statusBarColor = requireContext().getColor(R.color.blue)
+        requireActivity().window.statusBarColor = requireContext().getColor(R.color.green)
 
         binding.apply {
 

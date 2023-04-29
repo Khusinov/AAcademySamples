@@ -61,8 +61,8 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="6dp">
+                    app:cardBackgroundColor="#FF8413"
+                    app:cardCornerRadius="16dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="@font/montserratmedium"
                         android:text="Sample"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="22sp" />
 
 
@@ -81,40 +81,37 @@
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginHorizontal="4dp"
-                    android:layout_weight="0.9"
-                    android:background="@color/white"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="6dp">
+                    android:layout_weight="1.1"
+                    app:cardBackgroundColor="@color/red"
+                    app:cardCornerRadius="16dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/montserratmedium"
-                        android:text="Vocab"
-                        android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:text="Vocabulary"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
 
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/grammar"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
-                    android:layout_weight="1.1"
-                    android:background="@color/white"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="6dp">
+                    android:layout_weight="0.7"
+                    app:cardBackgroundColor="@color/red"
+                    app:cardCornerRadius="16dp">
 
                     <TextView
-                        android:id="@+id/grammar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/white"
                         android:fontFamily="@font/montserratmedium"
-                        android:text="Grammar"
-                        android:textColor="@color/black"
+                        android:text="Tips"
+                        android:textColor="@color/white"
                         android:textSize="21.2sp" />
 
 
@@ -152,8 +149,8 @@
                     android:justificationMode="none"
                     android:textStyle="bold"
                     android:text="Nowadays most people think that there should be health balance while others think that?"
-                    android:textColor="@color/red"
-                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
                     android:layout_marginBottom="22sp"
                     android:visibility="visible"/>
 
@@ -163,10 +160,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserratmedium"
+                    android:background="@color/white"
                     android:justificationMode="none"
                     android:text="@string/sample"
                     android:textColor="@color/black"
-                    android:textSize="22sp"
+                    android:textSize="20sp"
                     android:visibility="visible" />
 
                 <LinearLayout
@@ -183,12 +181,14 @@
 
                     <Button
                         android:id="@+id/copyBtn"
-                        android:layout_width="wrap_content"
+                        android:layout_width="190dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="12dp"
+                        android:textAllCaps="false"
                         android:backgroundTint="#FF3535"
-                        android:text="Copy" />
+                        android:text="Copy sample" />
                 </LinearLayout>
+
 
                 <ImageView
                     android:id="@+id/imageQuestion"
@@ -199,39 +199,21 @@
                     android:src="@drawable/image1"
                     android:visibility="visible" />
 
-
-                <LinearLayout
+                <TextView
                     android:id="@+id/bandScoreLv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:visibility="visible"
-                    android:orientation="horizontal">
+                    android:text="Click the image to open"
+                    android:textColor="@color/mainColor"
+                    android:textSize="16sp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserratregular"
-                        android:text="Band Score: "
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/bandScore"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserratregular"
-                        android:text="9.0"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/author"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -239,6 +221,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserratregular"
                         android:text="Author: "
+                        android:textStyle="bold"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -246,6 +229,7 @@
                         android:id="@+id/authorName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textStyle="bold"
                         android:fontFamily="@font/montserratregular"
                         android:text="Shakhrukhmiroz Jumaniyozov"
                         android:textColor="@color/black"

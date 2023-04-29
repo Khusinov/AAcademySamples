@@ -3,6 +3,7 @@ package com.khusinov.aacademysamples.ui.task2more
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log

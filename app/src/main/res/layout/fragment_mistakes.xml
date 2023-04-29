@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5F45FF"
+    android:background="#34C142"
     android:orientation="vertical"
     tools:context=".ui.mistakes.MistakesFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#5F45FF">
+        android:background="#34C142">
 
         <LinearLayout
             android:layout_width="match_parent"

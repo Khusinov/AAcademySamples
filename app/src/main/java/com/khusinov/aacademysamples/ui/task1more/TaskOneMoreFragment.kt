@@ -1,11 +1,13 @@
 package com.khusinov.aacademysamples.ui.task1more
 
 
+import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Context.CLIPBOARD_SERVICE
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -44,11 +46,11 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
     }
 
 
+    @SuppressLint("ResourceAsColor")
     private fun setupUI() {
         binding.apply {
             question.text = taskOne.question
             authorName.text = taskOne.author
-            bandScore.text = taskOne.score
             fullAnswer.text = taskOne.sample
             if (taskOne.imageUrl != null && taskOne.imageUrl != "") Picasso.get()
                 .load(taskOne.imageUrl).into(imageQuestion)
@@ -66,7 +68,6 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
                 // data
                 question.text = taskOne.question
                 authorName.text = taskOne.author
-                bandScore.text = taskOne.score
                 fullAnswer.text = taskOne.sample
                 if (taskOne.imageUrl != null && taskOne.imageUrl != "") Picasso.get()
                     .load(taskOne.imageUrl).into(imageQuestion)
@@ -76,6 +77,9 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
                 bandScoreLv.visibility = View.VISIBLE
                 author.visibility = View.VISIBLE
                 imageQuestion.visibility = View.VISIBLE
+                vocab.setCardBackgroundColor(Color.RED)
+                sample.setCardBackgroundColor(Color.parseColor("#FF8413"))
+                grammar.setCardBackgroundColor(Color.RED)
             }
             vocab.setOnClickListener {
                 //data
@@ -86,6 +90,9 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
                 bandScoreLv.visibility = View.GONE
                 author.visibility = View.GONE
                 imageQuestion.visibility = View.GONE
+                vocab.setCardBackgroundColor(Color.parseColor("#FF8413"))
+                sample.setCardBackgroundColor(Color.RED)
+                grammar.setCardBackgroundColor(Color.RED)
             }
             grammar.setOnClickListener {
                 //data
@@ -96,6 +103,10 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
                 bandScoreLv.visibility = View.GONE
                 author.visibility = View.GONE
                 imageQuestion.visibility = View.GONE
+
+                vocab.setCardBackgroundColor(Color.RED)
+                sample.setCardBackgroundColor(Color.RED)
+                grammar.setCardBackgroundColor(Color.parseColor("#FF8413"))
 
             }
 

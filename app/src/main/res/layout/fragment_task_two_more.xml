@@ -101,7 +101,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="40dp"
-                    android:layout_weight="1.1"
+                    android:layout_weight="0.9"
                     android:background="@color/white"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="6dp">
@@ -113,7 +113,7 @@
                         android:layout_gravity="center"
                         android:background="@color/white"
                         android:fontFamily="@font/montserratmedium"
-                        android:text="Grammar"
+                        android:text="Tips"
                         android:textColor="@color/black"
                         android:textSize="21.2sp" />
 
@@ -152,7 +152,7 @@
                     android:fontFamily="@font/montserratmedium"
                     android:justificationMode="none"
                     android:text="Nowadays most people think that there should be health balance while others think that?"
-                    android:textColor="@color/red"
+                    android:textColor="#FF8413"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:visibility="visible" />

@@ -39,10 +39,11 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginHorizontal="8dp"
-                android:backgroundTint="#34C142"
+                app:cardBackgroundColor="@color/green"
                 app:cardCornerRadius="15dp">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cercle"
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:layout_gravity="center_vertical"
@@ -78,7 +79,7 @@
                     android:fontFamily="@font/montserratmedium"
                     android:text="Lorem ipsum dolor sit amet consecteturLorem ipsum."
                     android:textColor="#04194D"
-                    android:textSize="20sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/questionDate"
