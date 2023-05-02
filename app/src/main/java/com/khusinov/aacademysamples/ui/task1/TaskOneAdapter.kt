@@ -42,6 +42,7 @@ class TaskOneAdapter() :
 
                 when (colorId) {
                     0 -> {
+                        // red
                         colorId = 1
                         view.setBackgroundColor(Color.RED)
                         CardViewNumber.setCardBackgroundColor(Color.RED)
@@ -50,14 +51,16 @@ class TaskOneAdapter() :
                         questionDate.setTextColor(Color.RED)
                     }
                     1 -> {
-                        view.setBackgroundColor(Color.GREEN)
-                        CardViewNumber.setCardBackgroundColor(Color.GREEN)
-                        questionId.setTextColor(Color.GREEN)
-                        icArrow.setColorFilter(Color.GREEN)
-                        questionDate.setTextColor(Color.GREEN)
+                        // green
+                        view.setBackgroundColor(Color.parseColor("#34C142"))
+                        CardViewNumber.setCardBackgroundColor(Color.parseColor("#34C142"))
+                        questionId.setTextColor(Color.parseColor("#34C142"))
+                        icArrow.setColorFilter(Color.parseColor("#34C142"))
+                        questionDate.setTextColor(Color.parseColor("#34C142"))
                         colorId = 2
                     }
                     2 -> {
+                        // blue
                         view.setBackgroundColor(Color.BLUE)
                         CardViewNumber.setCardBackgroundColor(Color.BLUE)
                         questionId.setTextColor(Color.BLUE)
@@ -66,6 +69,7 @@ class TaskOneAdapter() :
                         colorId = 3
                     }
                     3 -> {
+                        //orange
                         view.setBackgroundColor(Color.parseColor("#FF8413"))
                         CardViewNumber.setCardBackgroundColor(Color.parseColor("#FF8413"))
                         questionId.setTextColor(Color.parseColor("#FF8413"))

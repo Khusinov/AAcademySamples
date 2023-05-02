@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_homeFragment_to_aboutUsFragment"
             app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_connectionFragment"
+            app:destination="@id/connectionFragment" />
     </fragment>
     <fragment
         android:id="@+id/mistakesFragment"
@@ -81,4 +84,13 @@
         android:name="com.khusinov.aacademysamples.AboutUsFragment"
         android:label="fragment_about_us"
         tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/connectionFragment"
+        android:name="com.khusinov.aacademysamples.ConnectionFragment"
+        android:label="fragment_connection"
+        tools:layout="@layout/fragment_connection" >
+        <action
+            android:id="@+id/action_connectionFragment_self"
+            app:destination="@id/connectionFragment" />
+    </fragment>
 </navigation>

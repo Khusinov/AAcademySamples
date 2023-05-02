@@ -110,6 +110,7 @@
 
 
             <LinearLayout
+                android:id="@+id/instagram"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -133,6 +134,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/telegram"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -146,6 +148,7 @@
                     android:src="@drawable/telegram" />
 
                 <TextView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -159,10 +162,24 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/izzat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Report about bugs to programmer: shakhriyordev@gmail.com t.me/xusinov"
+                android:layout_margin="10dp"
+                android:text="Report us about the latest questions"
+                android:textColorLink="@color/red"
+                android:textColor="@color/mainColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/programmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:text="Report about bugs to programmer"
+                android:textColorLink="@color/red"
                 android:textColor="@color/mainColor"
                 android:textSize="18sp" />
 

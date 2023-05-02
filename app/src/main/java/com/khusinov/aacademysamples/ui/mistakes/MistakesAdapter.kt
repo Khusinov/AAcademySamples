@@ -2,6 +2,7 @@ package com.khusinov.aacademysamples.ui.mistakes
 
 import android.annotation.SuppressLint
 import android.graphics.Color
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,7 +27,7 @@ class MistakesAdapter : RecyclerView.Adapter<MistakesAdapter.MistakesViewHolder>
                 // view.setBackgroundColor(Color.parseColor("#5F45FF"))
 
                 tipId.text = "${adapterPosition + 1}"
-                textview.text = mistakeCurrent.tipBody
+                textview.text =  Html.fromHtml(mistakeCurrent.tipBody)
 
                 if (mistakeCurrent.imageUrl != null && mistakeCurrent.imageUrl != "") Picasso.get()
                     .load(mistakeCurrent.imageUrl).into(imageTip)

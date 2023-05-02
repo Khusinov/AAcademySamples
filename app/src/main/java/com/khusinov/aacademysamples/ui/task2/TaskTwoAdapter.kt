@@ -19,6 +19,7 @@ class TaskTwoAdapter() :
 
     private val TAG = "TaskTwoAdapter"
 
+    var colorId = 0
     private val dif = AsyncListDiffer(this, ITEM_DIFF)
 
     var onClick: ((TaskTwo) -> Unit)? = null
@@ -36,6 +37,48 @@ class TaskTwoAdapter() :
                 questionTv.text = taskTwoCurrent.question
                 questionDate.text = taskTwoCurrent.date
                 view.setBackgroundColor(Color.parseColor("#FF8413"))
+
+                when (colorId) {
+                    0 -> {
+                        // red
+                        colorId = 1
+                        view.setBackgroundColor(Color.RED)
+                        CardViewNumber.setCardBackgroundColor(Color.RED)
+                        questionId.setTextColor(Color.RED)
+                        icArrow.setColorFilter(Color.RED)
+                        questionDate.setTextColor(Color.RED)
+                    }
+                    1 -> {
+                        // green
+                        view.setBackgroundColor(Color.parseColor("#34C142"))
+                        CardViewNumber.setCardBackgroundColor(Color.parseColor("#34C142"))
+                        questionId.setTextColor(Color.parseColor("#34C142"))
+                        icArrow.setColorFilter(Color.parseColor("#34C142"))
+                        questionDate.setTextColor(Color.parseColor("#34C142"))
+                        colorId = 2
+                    }
+                    2 -> {
+                        // blue
+                        view.setBackgroundColor(Color.BLUE)
+                        CardViewNumber.setCardBackgroundColor(Color.BLUE)
+                        questionId.setTextColor(Color.BLUE)
+                        icArrow.setColorFilter(Color.BLUE)
+                        questionDate.setTextColor(Color.BLUE)
+                        colorId = 3
+                    }
+                    3 -> {
+                        //orange
+                        view.setBackgroundColor(Color.parseColor("#FF8413"))
+                        CardViewNumber.setCardBackgroundColor(Color.parseColor("#FF8413"))
+                        questionId.setTextColor(Color.parseColor("#FF8413"))
+                        icArrow.setColorFilter(Color.parseColor("#FF8413"))
+                        questionDate.setTextColor(Color.parseColor("#FF8413"))
+                        colorId = 0
+                    }
+                }
+
+
+
 
                 Log.d(TAG, "bind: ${taskTwoCurrent.date}")
 

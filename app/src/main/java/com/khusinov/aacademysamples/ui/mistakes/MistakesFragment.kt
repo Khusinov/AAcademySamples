@@ -40,6 +40,7 @@ class MistakesFragment : Fragment(R.layout.fragment_mistakes) {
             for (document in result) {
                 Log.d("Galdi bi", "${document.id} => ${document.data}")
 
+                //  mistake and tip is the same model classes
                 val tip = Tip(
                     document.data["tipBody"].toString(), document.data["imageUrl"].toString()
                 )

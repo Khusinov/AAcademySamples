@@ -114,6 +114,17 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/internetConnectionTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/mainColor"
+            android:text="No internet connection. Please, use this app with internet!"/>
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/task1"
@@ -368,6 +379,7 @@
                         android:textSize="16sp" />
 
                     <TextView
+                        android:id="@+id/count3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="7"
