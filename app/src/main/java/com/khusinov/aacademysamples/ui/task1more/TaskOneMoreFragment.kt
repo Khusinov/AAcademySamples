@@ -11,6 +11,7 @@ import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -50,8 +51,9 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
     private fun setupUI() {
         binding.apply {
             question.text = taskOne.question
+         //   question.text = Html.fromHtml(taskOne.question)
             authorName.text = taskOne.author
-            fullAnswer.text = taskOne.sample
+            fullAnswer.text = Html.fromHtml(taskOne.sample)
             if (taskOne.imageUrl != null && taskOne.imageUrl != "") Picasso.get()
                 .load(taskOne.imageUrl).into(imageQuestion)
 
@@ -68,7 +70,7 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
                 // data
                 question.text = taskOne.question
                 authorName.text = taskOne.author
-                fullAnswer.text = taskOne.sample
+                fullAnswer.text = Html.fromHtml(taskOne.sample)
                 if (taskOne.imageUrl != null && taskOne.imageUrl != "") Picasso.get()
                     .load(taskOne.imageUrl).into(imageQuestion)
                 //view
@@ -83,7 +85,7 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
             }
             vocab.setOnClickListener {
                 //data
-                fullAnswer.text = taskOne.vocabulary
+                fullAnswer.text = Html.fromHtml(taskOne.vocabulary)
                 // view
                 question.visibility = View.GONE
                 copyBtnLv.visibility = View.GONE
@@ -96,7 +98,7 @@ class TaskOneMoreFragment : Fragment(R.layout.fragment_task_one_more) {
             }
             grammar.setOnClickListener {
                 //data
-                fullAnswer.text = taskOne.grammar
+                fullAnswer.text = Html.fromHtml(taskOne.grammar)
                 // view
                 question.visibility = View.GONE
                 copyBtnLv.visibility = View.GONE

@@ -6,6 +6,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -43,7 +44,9 @@ class TaskTwoMoreFragment : Fragment(R.layout.fragment_task_two_more) {
         binding.apply {
             authorName.text = taskTwo.author
             bandScore.text = taskTwo.score
-            fullAnswer.text = taskTwo.sample
+            question.text = taskTwo.question
+            fullAnswer.text = Html.fromHtml(taskTwo.sample)
+
             if (taskTwo.imageUrl != null && taskTwo.imageUrl != "") Picasso.get()
                 .load(taskTwo.imageUrl).into(imageQuestion)
 
@@ -61,7 +64,7 @@ class TaskTwoMoreFragment : Fragment(R.layout.fragment_task_two_more) {
                 question.text = taskTwo.question
                 authorName.text = taskTwo.author
                 bandScore.text = taskTwo.score
-                fullAnswer.text = taskTwo.sample
+                fullAnswer.text = Html.fromHtml(taskTwo.sample)
                 if (taskTwo.imageUrl != null && taskTwo.imageUrl != "") Picasso.get()
                     .load(taskTwo.imageUrl).into(imageQuestion)
                 //view
@@ -70,16 +73,24 @@ class TaskTwoMoreFragment : Fragment(R.layout.fragment_task_two_more) {
                 bandScoreLv.visibility = View.VISIBLE
                 author.visibility = View.VISIBLE
                 imageQuestion.visibility = View.VISIBLE
+
+                vocab.setCardBackgroundColor(Color.parseColor("#FF8413"))
+                sample.setCardBackgroundColor(Color.RED)
+                grammar.setCardBackgroundColor(Color.parseColor("#FF8413"))
             }
             vocab.setOnClickListener {
                 //data
-                fullAnswer.text = taskTwo.vocabulary
+                fullAnswer.text = Html.fromHtml(taskTwo.vocabulary)
                 // view
                 question.visibility = View.GONE
                 copyBtnLv.visibility = View.GONE
                 bandScoreLv.visibility = View.GONE
                 author.visibility = View.GONE
                 imageQuestion.visibility = View.GONE
+
+                vocab.setCardBackgroundColor(Color.RED)
+                sample.setCardBackgroundColor(Color.parseColor("#FF8413"))
+                grammar.setCardBackgroundColor(Color.parseColor("#FF8413"))
             }
             grammar.setOnClickListener {
                 //data
@@ -90,6 +101,10 @@ class TaskTwoMoreFragment : Fragment(R.layout.fragment_task_two_more) {
                 bandScoreLv.visibility = View.GONE
                 author.visibility = View.GONE
                 imageQuestion.visibility = View.GONE
+
+                vocab.setCardBackgroundColor(Color.parseColor("#FF8413"))
+                sample.setCardBackgroundColor(Color.parseColor("#FF8413"))
+                grammar.setCardBackgroundColor(Color.RED)
 
             }
 
