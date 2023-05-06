@@ -86,7 +86,6 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
                 )
             }
         }
-
     }
 
 
