@@ -1,13 +1,11 @@
-package com.khusinov.aacademysamples
+package com.khusinov.ieltswritingassistant
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import com.khusinov.aacademysamples.databinding.FragmentAboutUsBinding
+import com.khusinov.ieltswritingassistant.databinding.FragmentAboutUsBinding
 
 
 class AboutUsFragment : Fragment(R.layout.fragment_about_us) {
