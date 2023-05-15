@@ -443,7 +443,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:visibility="gone"
+        android:visibility="visible"
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-8982515368836053/8205991526"
         ads:layout_constraintBottom_toBottomOf="parent"

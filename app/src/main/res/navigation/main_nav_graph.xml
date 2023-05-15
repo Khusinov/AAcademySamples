@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.khusinov.aacademysamples.ui.home.HomeFragment"
+        android:name="com.khusinov.ieltswritingassistant.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -34,12 +34,12 @@
     </fragment>
     <fragment
         android:id="@+id/mistakesFragment"
-        android:name="com.khusinov.aacademysamples.ui.mistakes.MistakesFragment"
+        android:name="com.khusinov.ieltswritingassistant.ui.mistakes.MistakesFragment"
         android:label="fragment_mistakes"
         tools:layout="@layout/fragment_mistakes" />
     <fragment
         android:id="@+id/taskOneFragment"
-        android:name="com.khusinov.aacademysamples.ui.task1.TaskOneFragment"
+        android:name="com.khusinov.ieltswritingassistant.ui.task1.TaskOneFragment"
         android:label="fragment_task1"
         tools:layout="@layout/fragment_task1" >
         <action
@@ -47,12 +47,12 @@
             app:destination="@id/taskOneMoreFragment">
             <argument
                 android:name="task"
-                app:argType="com.khusinov.aacademysamples.model.TaskOne" />
+                app:argType="com.khusinov.ieltswritingassistant.model.TaskOne" />
         </action>
     </fragment>
     <fragment
         android:id="@+id/taskTwoFragment"
-        android:name="com.khusinov.aacademysamples.ui.task2.TaskTwoFragment"
+        android:name="com.khusinov.ieltswritingassistant.ui.task2.TaskTwoFragment"
         android:label="fragment_task_two"
         tools:layout="@layout/fragment_task_two" >
         <action
@@ -61,32 +61,32 @@
     </fragment>
     <fragment
         android:id="@+id/tipsFragment"
-        android:name="com.khusinov.aacademysamples.ui.tips.TipsFragment"
+        android:name="com.khusinov.ieltswritingassistant.ui.tips.TipsFragment"
         android:label="fragment_tips"
         tools:layout="@layout/fragment_tips" />
     <fragment
         android:id="@+id/taskOneMoreFragment"
-        android:name="com.khusinov.aacademysamples.ui.task1more.TaskOneMoreFragment"
+        android:name="com.khusinov.ieltswritingassistant.ui.task1more.TaskOneMoreFragment"
         android:label="fragment_task_one_more"
         tools:layout="@layout/fragment_task_one_more" />
     <fragment
         android:id="@+id/taskTwoMoreFragment"
-        android:name="com.khusinov.aacademysamples.ui.task2more.TaskTwoMoreFragment"
+        android:name="com.khusinov.ieltswritingassistant.ui.task2more.TaskTwoMoreFragment"
         android:label="fragment_task_two_more"
         tools:layout="@layout/fragment_task_two_more" />
     <fragment
         android:id="@+id/aiFragment"
-        android:name="com.khusinov.aacademysamples.AiFragment"
+        android:name="com.khusinov.ieltswritingassistant.AiFragment"
         android:label="fragment_ai"
         tools:layout="@layout/fragment_ai" />
     <fragment
         android:id="@+id/aboutUsFragment"
-        android:name="com.khusinov.aacademysamples.AboutUsFragment"
+        android:name="com.khusinov.ieltswritingassistant.AboutUsFragment"
         android:label="fragment_about_us"
         tools:layout="@layout/fragment_about_us" />
     <fragment
         android:id="@+id/connectionFragment"
-        android:name="com.khusinov.aacademysamples.ConnectionFragment"
+        android:name="com.khusinov.ieltswritingassistant.ConnectionFragment"
         android:label="fragment_connection"
         tools:layout="@layout/fragment_connection" >
         <action

@@ -6,15 +6,15 @@ plugins {
 }
 
 android {
-    namespace 'com.khusinov.aacademysamples'
+    namespace 'com.khusinov.ieltswritingassistant'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.khusinov.aacademysamples"
+        applicationId "com.khusinov.ieltswritingassistant"
         minSdk 23
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
