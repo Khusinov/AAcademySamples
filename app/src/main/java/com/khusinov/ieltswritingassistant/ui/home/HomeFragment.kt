@@ -63,7 +63,6 @@ class HomeFragment : Fragment(com.khusinov.ieltswritingassistant.R.layout.fragme
     private fun setupUI() {
         binding.apply {
 
-
         }
 
         var numberOfTask1 = 0
@@ -108,10 +107,9 @@ class HomeFragment : Fragment(com.khusinov.ieltswritingassistant.R.layout.fragme
             intent.action = Intent.ACTION_SEND
             intent.putExtra(
                 Intent.EXTRA_TEXT,
-                "Hey, Check out this great app:\nhttps://play.google.com/store/apps/details?id=uz.khusinov.ieltswritingassistant"
+                "Hey, Check out this great app:\nhttps://play.google.com/store/apps/details?id=com.khusinov.ieltswritingassistant"
             )
             intent.type = "text/plain"
-            //
             startActivity(Intent.createChooser(intent, "Share To:"))
         }
         binding.aiService.setOnClickListener {
@@ -155,8 +153,6 @@ class HomeFragment : Fragment(com.khusinov.ieltswritingassistant.R.layout.fragme
             override fun onAdOpened() {
                 Log.d(TAG, "onAdOpened: ")
             }
-
         }
     }
-
 }
