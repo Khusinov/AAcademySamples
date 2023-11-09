@@ -106,6 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:scaleType="centerInside"
+                android:visibility="gone"
                 android:src="@drawable/img_1" />
 
 

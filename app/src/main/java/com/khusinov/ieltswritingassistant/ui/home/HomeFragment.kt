@@ -96,7 +96,7 @@ class HomeFragment : Fragment(com.khusinov.ieltswritingassistant.R.layout.fragme
         binding.task2.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_taskTwoFragment)
         }
-        binding.tips.setOnClickListener {
+        binding.videoLessons.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_tipsFragment)
         }
         binding.commonMistakes.setOnClickListener {

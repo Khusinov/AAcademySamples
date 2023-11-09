@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "389379903379",
+    "project_id": "aplus-academy-samples",
+    "storage_bucket": "aplus-academy-samples.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389379903379:android:d57fcf800f2150d1592266",
+        "android_client_info": {
+          "package_name": "com.khusinov.aacademysamples"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389379903379-f12h5lrki7rqk2tvq7v9doassb6fhmgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Tz3X8ykSSYCFvRrb7O1rD1_GqSruUX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389379903379-f12h5lrki7rqk2tvq7v9doassb6fhmgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389379903379:android:693ca9d1d55c2c4a592266",
+        "android_client_info": {
+          "package_name": "com.khusinov.adminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389379903379-f12h5lrki7rqk2tvq7v9doassb6fhmgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Tz3X8ykSSYCFvRrb7O1rD1_GqSruUX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389379903379-f12h5lrki7rqk2tvq7v9doassb6fhmgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389379903379:android:5a6e06f06ddcedeb592266",
+        "android_client_info": {
+          "package_name": "com.khusinov.ieltswritingassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389379903379-f12h5lrki7rqk2tvq7v9doassb6fhmgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Tz3X8ykSSYCFvRrb7O1rD1_GqSruUX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389379903379-f12h5lrki7rqk2tvq7v9doassb6fhmgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
