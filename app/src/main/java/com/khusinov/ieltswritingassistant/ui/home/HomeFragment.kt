@@ -30,6 +30,9 @@ class HomeFragment : Fragment(com.khusinov.ieltswritingassistant.R.layout.fragme
         checkInternetConnection()
         setupUI()
         admob()
+        MobileAds.initialize(requireActivity()) {
+            // now you can use ads
+        }
     }
 
     private fun checkInternetConnection() {
