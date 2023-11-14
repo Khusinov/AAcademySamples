@@ -10,6 +10,7 @@ import com.google.firebase.ktx.Firebase
 import com.khusinov.ieltswritingassistant.R
 import com.khusinov.ieltswritingassistant.databinding.FragmentTipsBinding
 import com.khusinov.ieltswritingassistant.model.Tip
+import com.khusinov.ieltswritingassistant.model.VideoLessons
 import com.khusinov.ieltswritingassistant.viewBinding
 import com.yandex.mobile.ads.banner.AdSize
 import com.yandex.mobile.ads.banner.BannerAdEventListener
@@ -45,28 +46,30 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
         binding.apply {
 
 
-            val tipList = ArrayList<Tip>()
+            val videosList = ArrayList<VideoLessons>()
 
             val db = Firebase.firestore
-            db.collection("tip").get().addOnSuccessListener { result ->
+            db.collection("video_lessons").get().addOnSuccessListener { result ->
                 for (document in result) {
                     Log.d("Galdi bi", "${document.id} => ${document.data}")
 
-                    val tip = Tip(
-                        document.data["tipBody"].toString(),
-                        document.data["imageUrl"].toString()
+                    var video = VideoLessons(
+                        document.data["id"].toString(),
+                        document.data["name"].toString(),
+                        document.data["type"].toString(),
+                        document.data["videoUrl"].toString()
                     )
-                    tipList.add(tip)
+                    videosList.add(video)
 
                 }
-                callIt(tipList)
+                callIt(videosList)
             }.addOnFailureListener { exception ->
                 Log.w(TAG, "setupUI: Error getting documents.  ", exception)
             }
         }
     }
 
-    private fun callIt(list: List<Tip>) {
+    private fun callIt(list: List<VideoLessons>) {
 
 
         binding.apply {

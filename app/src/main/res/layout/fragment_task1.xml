@@ -23,8 +23,8 @@
                 android:id="@+id/ic_back"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:visibility="gone"
-                android:src="@drawable/ic_back" />
+                android:src="@drawable/ic_back"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -39,10 +39,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
                     android:fontFamily="@font/montserratmedium"
                     android:gravity="center"
                     android:text="Task 1"
-                    android:layout_marginStart="30dp"
                     android:textColor="@color/white"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -77,18 +77,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:visibility="gone"
-                android:indeterminate="true"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:visibility="visible"
-                android:paddingBottom="40dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_rv" />
+                android:indeterminate="true"
+                android:visibility="gone" />
 
             <com.yandex.mobile.ads.banner.BannerAdView
                 android:id="@+id/yandex_banner"
@@ -99,10 +89,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:paddingBottom="40dp"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_rv" />
 
 
         </LinearLayout>
-
 
 
     </com.google.android.material.card.MaterialCardView>

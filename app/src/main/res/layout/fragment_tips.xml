@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:visibility="visible"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_rv2" />
+                tools:listitem="@layout/item_video_lessons" />
 
         </LinearLayout>
 
