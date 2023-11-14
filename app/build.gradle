@@ -55,5 +55,9 @@ dependencies {
     // picasso
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation 'com.google.android.gms:play-services-ads:22.0.0'
-    implementation 'com.yandex.android:mobileads:6.1.0'
+
+    // yandex ads
+    implementation 'com.yandex.android:mobileads:5.10.0'
+
+
 }

@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
+        com.yandex.mobile.ads.common.MobileAds.initialize(this) { }
+
+
 
 
     }
