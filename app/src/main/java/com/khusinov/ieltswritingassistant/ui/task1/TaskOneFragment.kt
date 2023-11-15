@@ -32,9 +32,6 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
         MobileAds.initialize(requireContext()) { }
-        com.yandex.mobile.ads.common.MobileAds.initialize(requireContext()) { }
-
-
 
         loadYandexAds()
     }
@@ -108,7 +105,6 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
         mBannerAdView = binding.yandexBanner
         mBannerAdView.setAdUnitId("R-M-2580296-1")
         binding.yandexBanner.setAdSize(AdSize.stickySize(requireContext(), 320))
-
 
 
         // Creating an ad targeting object.
