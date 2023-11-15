@@ -1,17 +1,17 @@
 package com.khusinov.ieltswritingassistant.ui.tips
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.khusinov.ieltswritingassistant.databinding.ItemRv2Binding
 import com.khusinov.ieltswritingassistant.databinding.ItemVideoLessonsBinding
-import com.khusinov.ieltswritingassistant.model.Tip
 import com.khusinov.ieltswritingassistant.model.VideoLessons
-import com.squareup.picasso.Picasso
+
 
 class TipsAdapter : RecyclerView.Adapter<TipsAdapter.TipsViewHolder>() {
 
@@ -24,11 +24,19 @@ class TipsAdapter : RecyclerView.Adapter<TipsAdapter.TipsViewHolder>() {
             val tipCurrent = dif.currentList[adapterPosition]
 
             binding.apply {
-                videoName.text = "${adapterPosition + 1}"
+                videoName.text = "${adapterPosition + 1}. ${tipCurrent.name}"
 
                 if (tipCurrent.videoUrl != null && tipCurrent.videoUrl != "") {
 
-                } else videoView.visibility = View.GONE
+                }
+
+                item.setOnClickListener {
+
+                    val url = "${tipCurrent.videoUrl}"
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                    root.context.startActivity(intent)
+
+                }
             }
         }
     }
