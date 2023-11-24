@@ -91,6 +91,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389379903379:android:3dc5f35a2e9138c7592266",
+        "android_client_info": {
+          "package_name": "com.terrabyte.ieltswritingassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389379903379-f12h5lrki7rqk2tvq7v9doassb6fhmgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Tz3X8ykSSYCFvRrb7O1rD1_GqSruUX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389379903379-f12h5lrki7rqk2tvq7v9doassb6fhmgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
