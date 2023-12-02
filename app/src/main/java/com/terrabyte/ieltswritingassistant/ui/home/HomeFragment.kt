@@ -133,41 +133,6 @@ class HomeFragment : Fragment(com.terrabyte.ieltswritingassistant.R.layout.fragm
         }
     }
 
-    //    private fun admob() {
-//
-//        MobileAds.initialize(requireContext()) {}
-//        val mAdView: AdView = binding.adView
-//
-//        val adRequest = AdRequest.Builder().build()
-//        binding.adView.loadAd(adRequest)
-//
-//        mAdView.adListener = object : AdListener() {
-//
-//            override fun onAdClicked() {
-//                Log.d(TAG, "onAdClicked: ")
-//            }
-//
-//            override fun onAdClosed() {
-//                Log.d(TAG, "onAdClosed: ")
-//            }
-//
-//            override fun onAdFailedToLoad(adError: LoadAdError) {
-//                Log.d(TAG, "onAdFailedToLoad: ")
-//            }
-//
-//            override fun onAdImpression() {
-//                Log.d(TAG, "onAdImpression: ")
-//            }
-//
-//            override fun onAdLoaded() {
-//                Log.d(TAG, "onAdLoaded: ")
-//            }
-//
-//            override fun onAdOpened() {
-//                Log.d(TAG, "onAdOpened: ")
-//            }
-//        }
-//    }
     private fun loadYandexAds() {
         mBannerAdView = binding.yandexBanner
         mBannerAdView.setAdUnitId("R-M-2580296-1")
