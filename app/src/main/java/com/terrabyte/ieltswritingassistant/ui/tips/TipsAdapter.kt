@@ -23,8 +23,9 @@ class TipsAdapter : RecyclerView.Adapter<TipsAdapter.TipsViewHolder>() {
             val tipCurrent = dif.currentList[adapterPosition]
 
             binding.apply {
-                videoName.text = "${adapterPosition + 1}. ${tipCurrent.name}"
-                videoType.text = ""
+                videoName.text = tipCurrent.name
+                id.text = tipCurrent.id
+                videoType.text = tipCurrent.type
 
                 if (tipCurrent.videoUrl != null && tipCurrent.videoUrl != "") {
 

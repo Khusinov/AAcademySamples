@@ -40,7 +40,7 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
         binding.pBar.visibility = View.VISIBLE
         binding.rv.visibility = View.GONE
 
-        requireActivity().window.statusBarColor = requireContext().getColor(R.color.green)
+        requireActivity().window.statusBarColor = requireContext().getColor(R.color.blue2)
 
         binding.apply {
 
