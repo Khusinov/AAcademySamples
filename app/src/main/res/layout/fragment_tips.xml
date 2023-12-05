@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#34C142"
+    android:background="@color/blue2"
     android:orientation="vertical"
     tools:context=".ui.tips.TipsFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#34C142">
+        android:background="@color/blue2">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,13 +72,6 @@
                 android:layout_marginTop="20dp"
                 android:indeterminate="true"
                 android:visibility="gone" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Click the name to open video"
-                android:textColor="@color/black" />
 
             <com.yandex.mobile.ads.banner.BannerAdView
                 android:id="@+id/yandex_banner"

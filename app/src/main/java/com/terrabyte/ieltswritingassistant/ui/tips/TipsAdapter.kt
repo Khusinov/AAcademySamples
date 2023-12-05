@@ -24,6 +24,7 @@ class TipsAdapter : RecyclerView.Adapter<TipsAdapter.TipsViewHolder>() {
 
             binding.apply {
                 videoName.text = "${adapterPosition + 1}. ${tipCurrent.name}"
+                videoType.text = ""
 
                 if (tipCurrent.videoUrl != null && tipCurrent.videoUrl != "") {
 
