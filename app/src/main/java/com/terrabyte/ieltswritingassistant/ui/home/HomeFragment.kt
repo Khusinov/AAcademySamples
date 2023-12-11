@@ -23,12 +23,9 @@ import com.yandex.mobile.ads.common.ImpressionData
 import com.yandex.mobile.ads.common.MobileAds
 
 
-class HomeFragment : Fragment(com.terrabyte.ieltswritingassistant.R.layout.fragment_home) {
+class HomeFragment : Fragment(R.layout.fragment_home) {
     val binding by viewBinding { FragmentHomeBinding.bind(it) }
     private val TAG = "HomeFragment"
-    var numberOfTask1 = 0
-    var numberOfTask2 = 0
-    var numberOfMistakes = 0
     lateinit var sharedPreferences: SharedPreferences
     private lateinit var mBannerAdView: BannerAdView
 
