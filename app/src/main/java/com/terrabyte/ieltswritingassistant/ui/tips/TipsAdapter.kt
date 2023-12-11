@@ -29,6 +29,7 @@ class TipsAdapter : RecyclerView.Adapter<TipsAdapter.TipsViewHolder>() {
 
                 if (tipCurrent.videoUrl != null && tipCurrent.videoUrl != "") {
 
+
                 }
 
                 item.setOnClickListener {
