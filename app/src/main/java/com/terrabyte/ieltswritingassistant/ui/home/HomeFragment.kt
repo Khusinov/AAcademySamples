@@ -112,6 +112,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.commonMistakes.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_mistakesFragment)
         }
+        binding.vocabularies.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_vocabulariesFragment)
+        }
         binding.shareBtn.setOnClickListener {
             val intent = Intent()
             intent.action = Intent.ACTION_SEND
@@ -134,7 +137,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         mBannerAdView = binding.yandexBanner
         mBannerAdView.setAdUnitId("R-M-2580296-1")
         binding.yandexBanner.setAdSize(AdSize.stickySize(requireContext(), 320))
-
 
 
         // Creating an ad targeting object.

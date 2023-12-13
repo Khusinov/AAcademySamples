@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_homeFragment_to_connectionFragment"
             app:destination="@id/connectionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_vocabulariesFragment"
+            app:destination="@id/vocabulariesFragment" />
     </fragment>
     <fragment
         android:id="@+id/mistakesFragment"
@@ -93,4 +96,9 @@
             android:id="@+id/action_connectionFragment_self"
             app:destination="@id/connectionFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/vocabulariesFragment"
+        android:name="com.terrabyte.ieltswritingassistant.ui.vocabularies.VocabulariesFragment"
+        android:label="fragment_vocabularies"
+        tools:layout="@layout/fragment_vocabularies" />
 </navigation>
