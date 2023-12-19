@@ -15,6 +15,7 @@
         android:layout_marginTop="16dp"
         android:text="Writing Assistant"
         android:textColor="#D26B0C"
+        android:textStyle="bold"
         android:textSize="16sp" />
 
     <TextView
@@ -25,16 +26,16 @@
         android:layout_marginTop="6dp"
         android:layout_marginBottom="30dp"
         android:text="health and fitness"
-        android:textColor="#229896"
+        android:textColor="@color/someKindaGreen"
         android:textSize="20sp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:cardCornerRadius="12dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#E85241A0"
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv1"
@@ -53,15 +54,17 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="30dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/yellow" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#E85241A0"
+
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv2"
@@ -80,15 +83,16 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="28dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/yellow" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#E85241A0"
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv3"
@@ -107,15 +111,16 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="28dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/yellow" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#E85241A0"
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv4"
@@ -134,15 +139,16 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="28dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/yellow" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#E85241A0"
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv5"
@@ -161,15 +167,16 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="28dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/yellow" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#E85241A0"
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv6"
@@ -188,15 +195,16 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="28dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/someKindaGreen" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#E85241A0"
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv7"
@@ -215,15 +223,16 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="28dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/someKindaGreen" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#E85241A0"
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv8"
@@ -242,15 +251,16 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="28dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/someKindaGreen" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#E85241A0"
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv9"
@@ -269,15 +279,16 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="28dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/someKindaGreen" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="20dp"
-        app:cardBackgroundColor="#E85241A0">
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#E85241A0"
+        app:cardCornerRadius="12dp">
 
         <TextView
             android:id="@+id/tv10"
@@ -296,8 +307,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/yellow"
-        android:layout_marginHorizontal="28dp"/>
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/someKindaGreen" />
 
 
 </LinearLayout>
