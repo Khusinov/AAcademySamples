@@ -59,7 +59,7 @@ class VocabulariesFragment : Fragment() {
             val videosList = ArrayList<VideoLessons>()
 
             val db = Firebase.firestore
-            db.collection("video_lessons").get().addOnSuccessListener { result ->
+            db.collection("vocabularies").get().addOnSuccessListener { result ->
                 for (document in result) {
                     Log.d("Galdi bi", "${document.id} => ${document.data}")
 

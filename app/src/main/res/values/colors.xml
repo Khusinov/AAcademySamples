@@ -13,6 +13,7 @@
     <color name="green">#34C142</color>
     <color name="blue">#5F45FF</color>
     <color name="blue2">#34A0FF</color>
+    <color name="vocabBackground">#E85241A0</color>
 
 
 </resources>

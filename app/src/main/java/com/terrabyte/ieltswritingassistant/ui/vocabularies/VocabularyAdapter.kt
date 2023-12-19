@@ -35,10 +35,6 @@ class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.VocabularyViewH
 
                 item.setOnClickListener {
 
-                    val url = "${tipCurrent.videoUrl}"
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                    root.context.startActivity(intent)
-
                 }
             }
         }
