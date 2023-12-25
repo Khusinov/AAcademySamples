@@ -23,12 +23,9 @@ import com.yandex.mobile.ads.common.ImpressionData
 import com.yandex.mobile.ads.common.MobileAds
 
 
-class HomeFragment : Fragment(com.terrabyte.ieltswritingassistant.R.layout.fragment_home) {
+class HomeFragment : Fragment(R.layout.fragment_home) {
     val binding by viewBinding { FragmentHomeBinding.bind(it) }
     private val TAG = "HomeFragment"
-    var numberOfTask1 = 0
-    var numberOfTask2 = 0
-    var numberOfMistakes = 0
     lateinit var sharedPreferences: SharedPreferences
     private lateinit var mBannerAdView: BannerAdView
 
@@ -115,6 +112,9 @@ class HomeFragment : Fragment(com.terrabyte.ieltswritingassistant.R.layout.fragm
         binding.commonMistakes.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_mistakesFragment)
         }
+        binding.vocabularies.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_vocabulariesFragment)
+        }
         binding.shareBtn.setOnClickListener {
             val intent = Intent()
             intent.action = Intent.ACTION_SEND
@@ -137,7 +137,6 @@ class HomeFragment : Fragment(com.terrabyte.ieltswritingassistant.R.layout.fragm
         mBannerAdView = binding.yandexBanner
         mBannerAdView.setAdUnitId("R-M-2580296-1")
         binding.yandexBanner.setAdSize(AdSize.stickySize(requireContext(), 320))
-
 
 
         // Creating an ad targeting object.
