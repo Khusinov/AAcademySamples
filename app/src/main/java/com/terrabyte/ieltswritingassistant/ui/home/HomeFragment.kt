@@ -39,8 +39,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         MobileAds.initialize(requireContext()) { }
         com.yandex.mobile.ads.common.MobileAds.initialize(requireContext()) { }
 
-
-
         loadYandexAds()
     }
 
