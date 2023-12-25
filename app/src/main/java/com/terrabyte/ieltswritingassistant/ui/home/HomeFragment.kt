@@ -30,6 +30,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var mBannerAdView: BannerAdView
 
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         checkInternetConnection()
