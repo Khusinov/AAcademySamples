@@ -9,32 +9,19 @@ import android.view.ViewGroup
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.terrabyte.ieltswritingassistant.R
-import com.terrabyte.ieltswritingassistant.databinding.FragmentTipsBinding
 import com.terrabyte.ieltswritingassistant.databinding.FragmentVocabulariesBinding
 import com.terrabyte.ieltswritingassistant.model.VideoLessons
-import com.terrabyte.ieltswritingassistant.ui.tips.TipsAdapter
 import com.terrabyte.ieltswritingassistant.viewBinding
-import com.yandex.mobile.ads.banner.AdSize
-import com.yandex.mobile.ads.banner.BannerAdEventListener
-import com.yandex.mobile.ads.banner.BannerAdView
-import com.yandex.mobile.ads.common.AdRequest
-import com.yandex.mobile.ads.common.AdRequestError
-import com.yandex.mobile.ads.common.ImpressionData
-import com.yandex.mobile.ads.common.MobileAds
 
 class VocabulariesFragment : Fragment() {
 
     val binding by viewBinding { FragmentVocabulariesBinding.bind(it) }
     private val TAG = "TipsFragment"
-    private lateinit var mBannerAdView: BannerAdView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         setupUI()
-
-        MobileAds.initialize(requireContext()) { }
-        loadYandexAds()
     }
 
 
@@ -92,40 +79,6 @@ class VocabulariesFragment : Fragment() {
             adapter.submitList(list)
 
         }
-    }
-
-    private fun loadYandexAds() {
-        mBannerAdView = binding.yandexBanner
-        mBannerAdView.setAdUnitId("R-M-2580296-1")
-        binding.yandexBanner.setAdSize(AdSize.stickySize(requireContext(), 320))
-
-
-        // Creating an ad targeting object.
-        val adRequest = AdRequest.Builder().build()
-
-        // Registering a listener for tracking events in the banner ad.
-        mBannerAdView.setBannerAdEventListener(object : BannerAdEventListener {
-            override fun onAdLoaded() {
-                mBannerAdView.visibility = View.VISIBLE
-                Log.d("YANDEX", "LOAD")
-            }
-
-            override fun onAdFailedToLoad(p0: AdRequestError) {
-                mBannerAdView.visibility = View.INVISIBLE
-                Log.d("YANDEX FAILED", p0.toString())
-            }
-
-            override fun onAdClicked() {}
-
-            override fun onLeftApplication() {}
-
-            override fun onReturnedToApplication() {}
-
-            override fun onImpression(p0: ImpressionData?) {}
-
-        })
-        // Loading ads.
-        mBannerAdView.loadAd(adRequest)
     }
 
 
