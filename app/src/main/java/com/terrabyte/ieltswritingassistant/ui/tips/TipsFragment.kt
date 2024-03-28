@@ -5,34 +5,26 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.terrabyte.ieltswritingassistant.R
 import com.terrabyte.ieltswritingassistant.databinding.FragmentTipsBinding
 import com.terrabyte.ieltswritingassistant.model.VideoLessons
 import com.terrabyte.ieltswritingassistant.viewBinding
-import com.yandex.mobile.ads.banner.AdSize
-import com.yandex.mobile.ads.banner.BannerAdEventListener
-import com.yandex.mobile.ads.banner.BannerAdView
-import com.yandex.mobile.ads.common.AdRequest
-import com.yandex.mobile.ads.common.AdRequestError
-import com.yandex.mobile.ads.common.ImpressionData
-import com.yandex.mobile.ads.common.MobileAds
 
 
 class TipsFragment : Fragment(R.layout.fragment_tips) {
 
     val binding by viewBinding { FragmentTipsBinding.bind(it) }
     private val TAG = "TipsFragment"
-    private lateinit var mBannerAdView: BannerAdView
+    private val adapter by lazy { TipsAdapter(this::onItemClicked) }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
 
-        MobileAds.initialize(requireContext()) { }
-        loadYandexAds()
     }
 
     private fun setupUI() {
@@ -41,6 +33,7 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
         binding.rv.visibility = View.GONE
 
         requireActivity().window.statusBarColor = requireContext().getColor(R.color.blue2)
+
 
         binding.apply {
 
@@ -76,46 +69,19 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
             rv.visibility = View.VISIBLE
 
             val recyclerView = rv
-            var adapter = TipsAdapter()
             recyclerView.adapter = adapter
             adapter.submitList(list)
+
 
         }
     }
 
-    private fun loadYandexAds() {
-        mBannerAdView = binding.yandexBanner
-        mBannerAdView.setAdUnitId("R-M-2580296-1")
-        binding.yandexBanner.setAdSize(AdSize.stickySize(requireContext(), 320))
+    private fun onItemClicked(videoLessons: VideoLessons) {
+        val bundle = Bundle()
+        bundle.putString("videoUrl", videoLessons.videoUrl) // Example: passing a String
+        bundle.putString("lessonId", videoLessons.id) // Example: passing a String
 
-
-        // Creating an ad targeting object.
-        val adRequest = AdRequest.Builder().build()
-
-        // Registering a listener for tracking events in the banner ad.
-        mBannerAdView.setBannerAdEventListener(object : BannerAdEventListener {
-            override fun onAdLoaded() {
-                mBannerAdView.visibility = View.VISIBLE
-                Log.d("YANDEX", "LOAD")
-            }
-
-            override fun onAdFailedToLoad(p0: AdRequestError) {
-                mBannerAdView.visibility = View.INVISIBLE
-                Log.d("YANDEX FAILED", p0.toString())
-            }
-
-            override fun onAdClicked() {}
-
-            override fun onLeftApplication() {}
-
-            override fun onReturnedToApplication() {}
-
-            override fun onImpression(p0: ImpressionData?) {}
-
-        })
-        // Loading ads.
-        mBannerAdView.loadAd(adRequest)
+        findNavController().navigate(R.id.action_tipsFragment_to_videoViewFragment, bundle)
     }
-
 
 }

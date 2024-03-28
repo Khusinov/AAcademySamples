@@ -66,7 +66,11 @@
         android:id="@+id/tipsFragment"
         android:name="com.terrabyte.ieltswritingassistant.ui.tips.TipsFragment"
         android:label="fragment_tips"
-        tools:layout="@layout/fragment_tips" />
+        tools:layout="@layout/fragment_tips" >
+        <action
+            android:id="@+id/action_tipsFragment_to_videoViewFragment"
+            app:destination="@id/videoViewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/taskOneMoreFragment"
         android:name="com.terrabyte.ieltswritingassistant.ui.task1more.TaskOneMoreFragment"
@@ -101,4 +105,9 @@
         android:name="com.terrabyte.ieltswritingassistant.ui.vocabularies.VocabulariesFragment"
         android:label="fragment_vocabularies"
         tools:layout="@layout/fragment_vocabularies" />
+    <fragment
+        android:id="@+id/videoViewFragment"
+        android:name="com.terrabyte.ieltswritingassistant.ui.tips.VideoViewFragment"
+        android:label="fragment_video_view"
+        tools:layout="@layout/fragment_video_view" />
 </navigation>

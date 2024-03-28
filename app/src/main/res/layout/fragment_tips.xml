@@ -73,15 +73,6 @@
                 android:indeterminate="true"
                 android:visibility="gone" />
 
-            <com.yandex.mobile.ads.banner.BannerAdView
-                android:id="@+id/yandex_banner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv"

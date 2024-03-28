@@ -6,29 +6,27 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.net.Uri.Builder
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.MobileAds
 import com.terrabyte.ieltswritingassistant.R
 import com.terrabyte.ieltswritingassistant.databinding.FragmentHomeBinding
 import com.terrabyte.ieltswritingassistant.viewBinding
-import com.yandex.mobile.ads.banner.AdSize
-import com.yandex.mobile.ads.banner.BannerAdEventListener
-import com.yandex.mobile.ads.banner.BannerAdView
-import com.yandex.mobile.ads.common.AdRequest
-import com.yandex.mobile.ads.common.AdRequestError
-import com.yandex.mobile.ads.common.ImpressionData
-import com.yandex.mobile.ads.common.MobileAds
+import java.util.Locale
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
     val binding by viewBinding { FragmentHomeBinding.bind(it) }
     private val TAG = "HomeFragment"
     lateinit var sharedPreferences: SharedPreferences
-    private lateinit var mBannerAdView: BannerAdView
-
 
 
 
@@ -36,10 +34,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         checkInternetConnection()
         setupUI()
-        MobileAds.initialize(requireContext()) { }
-        com.yandex.mobile.ads.common.MobileAds.initialize(requireContext()) { }
-
-        loadYandexAds()
+        admob()
     }
 
     private fun checkInternetConnection() {
@@ -71,9 +66,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun setupUI() {
-        binding.apply {
 
-        }
 
         var numberOfTask1 = 0
         var numberOfTask2 = 0
@@ -87,7 +80,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         numberOfMistakes = sharedPreferences.getInt("numberOfMistakes", 0)
 
 
-// TODO: Add adView to your view hierarchy.
 
         requireActivity().window.statusBarColor = requireContext().getColor(R.color.white)
 
@@ -133,38 +125,41 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-    private fun loadYandexAds() {
-        mBannerAdView = binding.yandexBanner
-        mBannerAdView.setAdUnitId("R-M-2580296-1")
-        binding.yandexBanner.setAdSize(AdSize.stickySize(requireContext(), 320))
+    private fun admob() {
+        Log.d(TAG, "admob: 130")
 
+        MobileAds.initialize(requireContext()) {}
+        val mAdView: AdView = binding.adView
 
-        // Creating an ad targeting object.
         val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
 
-        // Registering a listener for tracking events in the banner ad.
-        mBannerAdView.setBannerAdEventListener(object : BannerAdEventListener {
+        mAdView.adListener = object : AdListener() {
+
+            override fun onAdClicked() {
+                Log.d(TAG, "onAdClicked: ")
+            }
+
+            override fun onAdClosed() {
+                Log.d(TAG, "onAdClosed: ")
+            }
+
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                Log.d(TAG, "onAdFailedToLoad: ")
+            }
+
+            override fun onAdImpression() {
+                Log.d(TAG, "onAdImpression: ")
+            }
+
             override fun onAdLoaded() {
-                mBannerAdView.visibility = View.VISIBLE
-                Log.d("YANDEX", "LOAD")
+                Log.d(TAG, "onAdLoaded: ")
             }
 
-            override fun onAdFailedToLoad(p0: AdRequestError) {
-                mBannerAdView.visibility = View.INVISIBLE
-                Log.d("YANDEX FAILED", p0.toString())
+            override fun onAdOpened() {
+                Log.d(TAG, "onAdOpened: ")
             }
 
-            override fun onAdClicked() {}
-
-            override fun onLeftApplication() {}
-
-            override fun onReturnedToApplication() {}
-
-            override fun onImpression(p0: ImpressionData?) {}
-
-        })
-        // Loading ads.
-        mBannerAdView.loadAd(adRequest)
+        }
     }
-
 }
