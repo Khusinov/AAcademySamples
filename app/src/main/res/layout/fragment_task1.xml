@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="#FF3535"
     android:orientation="vertical"
     tools:context=".ui.task1.TaskOneFragment">
@@ -80,6 +81,7 @@
                 android:indeterminate="true"
                 android:visibility="gone" />
 
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv"
                 android:layout_width="match_parent"
@@ -90,11 +92,20 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_rv" />
 
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-8982515368836053/1694512933" />
 
         </LinearLayout>
 
 
     </com.google.android.material.card.MaterialCardView>
+
+
 
 
 </LinearLayout>

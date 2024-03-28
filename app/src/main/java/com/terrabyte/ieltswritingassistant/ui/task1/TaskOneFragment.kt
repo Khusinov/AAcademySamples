@@ -6,6 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.MobileAds
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.terrabyte.ieltswritingassistant.R
@@ -22,6 +27,7 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
+        admob()
     }
 
     private fun setupUI() {
@@ -86,6 +92,44 @@ class TaskOneFragment : Fragment(R.layout.fragment_task1) {
                     bundleOf("task" to it)
                 )
             }
+        }
+    }
+
+    private fun admob() {
+        Log.d(TAG, "admob: 130")
+
+        MobileAds.initialize(requireContext()) {}
+        val mAdView: AdView = binding.adView
+
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
+
+        mAdView.adListener = object : AdListener() {
+
+            override fun onAdClicked() {
+                Log.d(TAG, "onAdClicked: ")
+            }
+
+            override fun onAdClosed() {
+                Log.d(TAG, "onAdClosed: ")
+            }
+
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                Log.d(TAG, "onAdFailedToLoad: ")
+            }
+
+            override fun onAdImpression() {
+                Log.d(TAG, "onAdImpression: ")
+            }
+
+            override fun onAdLoaded() {
+                Log.d(TAG, "onAdLoaded: ")
+            }
+
+            override fun onAdOpened() {
+                Log.d(TAG, "onAdOpened: ")
+            }
+
         }
     }
 
