@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="12dp"
     android:background="@color/white"
     android:orientation="vertical"
+    android:padding="12dp"
     tools:context=".AboutUsFragment">
 
     <ScrollView
@@ -41,6 +41,7 @@
                     android:textColor="@color/mainColor"
                     android:textSize="26sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -93,96 +94,6 @@
                 android:textColor="@color/mainColor"
                 android:textSize="22sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Author: Shokhrukhmirzo Jumaniyozov"
-                android:textColor="@color/mainColor"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:scaleType="centerInside"
-                android:visibility="gone"
-                android:src="@drawable/img_1" />
-
-
-            <LinearLayout
-                android:id="@+id/instagram"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/instagram" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/montserratmedium"
-                    android:gravity="center"
-                    android:text=" aplusacademy_ielts"
-                    android:textColor="@color/mainColor"
-                    android:textSize="26sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/telegram"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:gravity="center"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/telegram" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/montserratmedium"
-                    android:gravity="center"
-                    android:text=" aplusacademyielts"
-                    android:textColor="@color/mainColor"
-                    android:textSize="26sp" />
-
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/izzat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="10dp"
-                android:text="Report us about the latest questions"
-                android:textColorLink="@color/red"
-                android:textColor="@color/mainColor"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/programmer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="10dp"
-                android:text="Report about bugs to programmer"
-                android:textColorLink="@color/red"
-                android:textColor="@color/mainColor"
-                android:textSize="18sp" />
 
         </LinearLayout>
 
