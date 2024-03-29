@@ -192,11 +192,12 @@
 
                 <ImageView
                     android:id="@+id/imageQuestion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="30dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/image1"
+                    android:src="@drawable/app_icon"
                     android:visibility="visible" />
 
                 <TextView
