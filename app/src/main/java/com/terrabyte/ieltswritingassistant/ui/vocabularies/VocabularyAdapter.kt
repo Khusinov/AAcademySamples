@@ -30,7 +30,6 @@ class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.VocabularyViewH
 
                 if (tipCurrent.videoUrl != null && tipCurrent.videoUrl != "") {
 
-
                 }
 
                 item.setOnClickListener {

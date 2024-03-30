@@ -112,7 +112,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             intent.action = Intent.ACTION_SEND
             intent.putExtra(
                 Intent.EXTRA_TEXT,
-                "Hey, Check out this great app:\nhttps://play.google.com/store/apps/details?id=com.khusinov.ieltswritingassistant"
+                "Hey, Check out this great app:\nhttps://play.google.com/store/apps/details?id=com.terrabyte.ieltswritingassistant"
             )
             intent.type = "text/plain"
             startActivity(Intent.createChooser(intent, "Share To:"))
