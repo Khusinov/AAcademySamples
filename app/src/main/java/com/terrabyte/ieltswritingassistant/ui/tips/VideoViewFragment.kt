@@ -109,4 +109,8 @@ class VideoViewFragment : Fragment(R.layout.fragment_video_view) {
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        player?.stop()
+    }
 }
