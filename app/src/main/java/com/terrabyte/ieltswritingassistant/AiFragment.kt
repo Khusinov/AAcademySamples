@@ -23,8 +23,8 @@ class AiFragment : Fragment(R.layout.fragment_ai) {
     private fun setupUI() {
         binding.apply {
 
-            webView.webViewClient = WebViewClient()
-            webView.loadUrl("http://ieltscdt.com/ielts-writing-essay-evaluation.php")
+            webView.webViewClient = CustomWebViewClient()
+            webView.loadUrl("https://www.oxfordlearnersdictionaries.com/")
             webView.settings.javaScriptEnabled = true
             webView.settings.setSupportZoom(true)
 
@@ -32,7 +32,6 @@ class AiFragment : Fragment(R.layout.fragment_ai) {
             webView.visibility = View.VISIBLE
 
         }
-
 
 
     }

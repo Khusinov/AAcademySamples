@@ -1,7 +1,6 @@
 package com.terrabyte.ieltswritingassistant
 
-import android.content.Intent
-import android.net.Uri
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -19,26 +18,6 @@ class AboutUsFragment : Fragment(R.layout.fragment_about_us) {
     private fun setupUI() {
         binding.apply {
 
-            telegram.setOnClickListener {
-                val telegram = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/aplusacademyielts"))
-                telegram.setPackage("org.telegram.messenger")
-                startActivity(telegram)
-            }
-
-            programmer.setOnClickListener {
-                val telegram = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/xusinov"))
-                telegram.setPackage("org.telegram.messenger")
-                startActivity(telegram)
-            }
-            instagram.setOnClickListener {
-                val telegram = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/aplusacademy_ielts/"))
-                startActivity(telegram)
-            }
-            izzat.setOnClickListener {
-                val telegram = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/IzzatAbdullaev"))
-                telegram.setPackage("org.telegram.messenger")
-                startActivity(telegram)
-            }
         }
     }
 

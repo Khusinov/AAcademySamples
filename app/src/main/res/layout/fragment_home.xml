@@ -60,6 +60,7 @@
                             android:layout_gravity="center"
                             android:fontFamily="@font/montserratmedium"
                             android:gravity="center"
+                            android:layout_marginStart="6dp"
                             android:text="Writing Assistant"
                             android:textColor="@color/mainColor"
                             android:textSize="23sp" />
@@ -473,7 +474,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Writing checker"
+                        android:text="Oxford Dictionarie"
                         android:textColor="@color/white"
                         android:textSize="26sp" />
 

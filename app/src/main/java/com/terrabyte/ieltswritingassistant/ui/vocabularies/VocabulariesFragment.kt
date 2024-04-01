@@ -52,7 +52,7 @@ class VocabulariesFragment : Fragment() {
 
                     val video = VideoLessons(
                         document.data["id"].toString(),
-                        document.data["name"].toString(),
+                        document.data["topicName"].toString(),
                         document.data["type"].toString(),
                         document.data["videoUrl"].toString()
                     )
