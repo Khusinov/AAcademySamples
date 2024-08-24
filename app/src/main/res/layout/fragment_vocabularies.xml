@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
+    android:background="@color/vocabBackground"
     android:orientation="vertical"
     tools:context=".ui.vocabularies.VocabulariesFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="@color/yellow">
+        android:background="@color/vocabBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                     android:layout_marginStart="30dp"
                     android:fontFamily="@font/montserratmedium"
                     android:gravity="center"
-                    android:text="Vocabularies"
+                    android:text="Topics"
                     android:textColor="@color/white"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -73,12 +73,11 @@
                 android:indeterminate="true"
                 android:visibility="gone" />
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:visibility="visible"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_vocabularies" />

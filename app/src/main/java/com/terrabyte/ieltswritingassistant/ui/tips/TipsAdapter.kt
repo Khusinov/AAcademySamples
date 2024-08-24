@@ -23,7 +23,7 @@ class TipsAdapter(private val onClicked: (order: VideoLessons) -> Unit) :
 
             binding.apply {
                 videoName.text = tipCurrent.name
-                id.text = tipCurrent.id
+                id.text = tipCurrent.id.toString()
                 videoType.text = tipCurrent.type
 
                 if (tipCurrent.videoUrl != null && tipCurrent.videoUrl != "") {

@@ -20,7 +20,6 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
     private val TAG = "TipsFragment"
     private val adapter by lazy { TipsAdapter(this::onItemClicked) }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
@@ -46,7 +45,7 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
                     Log.d("Galdi bi", "${document.id} => ${document.data}")
 
                     var video = VideoLessons(
-                        document.data["id"].toString(),
+                        document.data["id"].toString().toInt(),
                         document.data["name"].toString(),
                         document.data["type"].toString(),
                         document.data["videoUrl"].toString()
@@ -54,7 +53,7 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
                     videosList.add(video)
 
                 }
-                callIt(videosList)
+                callIt(videosList.sortedBy { it.id })
             }.addOnFailureListener { exception ->
                 Log.w(TAG, "setupUI: Error getting documents.  ", exception)
             }
@@ -79,7 +78,7 @@ class TipsFragment : Fragment(R.layout.fragment_tips) {
     private fun onItemClicked(videoLessons: VideoLessons) {
         val bundle = Bundle()
         bundle.putString("videoUrl", videoLessons.videoUrl) // Example: passing a String
-        bundle.putString("lessonId", videoLessons.id) // Example: passing a String
+        bundle.putString("lessonId", videoLessons.id.toString()) // Example: passing a String
 
         findNavController().navigate(R.id.action_tipsFragment_to_videoViewFragment, bundle)
     }

@@ -1,19 +1,18 @@
 package com.terrabyte.ieltswritingassistant.ui.vocabularies
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.terrabyte.ieltswritingassistant.databinding.ItemVideoLessonsBinding
 import com.terrabyte.ieltswritingassistant.databinding.ItemVocabulariesBinding
-import com.terrabyte.ieltswritingassistant.model.VideoLessons
+import com.terrabyte.ieltswritingassistant.model.Vocabularies
 
 
-class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.VocabularyViewHolder>() {
+class VocabularyAdapter(
+    private val onItemClick: (vocabulary: Vocabularies) -> Unit
+) : RecyclerView.Adapter<VocabularyAdapter.VocabularyViewHolder>() {
 
     private val dif = AsyncListDiffer(this, VocabularyAdapter.ITEM_DIFF)
 
@@ -21,19 +20,15 @@ class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.VocabularyViewH
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind() {
-            val tipCurrent = dif.currentList[adapterPosition]
+            val vocabulary = dif.currentList[adapterPosition]
 
             binding.apply {
-                topicName.text = tipCurrent.name
-                id.text = tipCurrent.id
-                vocabType.text = tipCurrent.type
-
-                if (tipCurrent.videoUrl != null && tipCurrent.videoUrl != "") {
-
-                }
+                topicName.text = vocabulary.topicName
+                id.text = vocabulary.id.toString()
+                vocabType.text = vocabulary.type
 
                 item.setOnClickListener {
-
+                    onItemClick(vocabulary)
                 }
             }
         }
@@ -52,17 +47,17 @@ class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.VocabularyViewH
 
     override fun onBindViewHolder(holder: VocabularyViewHolder, position: Int) = holder.bind()
 
-    fun submitList(list: List<VideoLessons>) {
+    fun submitList(list: List<Vocabularies>) {
         dif.submitList(list)
     }
 
     companion object {
-        private val ITEM_DIFF = object : DiffUtil.ItemCallback<VideoLessons>() {
-            override fun areItemsTheSame(oldItem: VideoLessons, newItem: VideoLessons): Boolean =
-                oldItem.name == newItem.name
+        private val ITEM_DIFF = object : DiffUtil.ItemCallback<Vocabularies>() {
+            override fun areItemsTheSame(oldItem: Vocabularies, newItem: Vocabularies): Boolean =
+                oldItem.id == newItem.id
 
             @SuppressLint("DiffUtilEquals")
-            override fun areContentsTheSame(oldItem: VideoLessons, newItem: VideoLessons): Boolean =
+            override fun areContentsTheSame(oldItem: Vocabularies, newItem: Vocabularies): Boolean =
                 oldItem == newItem
         }
     }

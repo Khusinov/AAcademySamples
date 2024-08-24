@@ -8,307 +8,57 @@
     android:orientation="vertical"
     tools:context=".ui.vocabularies.VocabListFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
-        android:text="Writing Assistant"
-        android:textColor="#D26B0C"
-        android:textStyle="bold"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/topicName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="30dp"
-        android:text="health and fitness"
-        android:textColor="@color/someKindaGreen"
-        android:textSize="20sp" />
-
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#E85241A0"
-        app:cardCornerRadius="12dp">
+        android:layout_height="70dp"
+        android:background="@color/vocabBackground">
 
-        <TextView
-            android:id="@+id/tv1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
 
 
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/yellow" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#E85241A0"
-
-        app:cardCornerRadius="12dp">
-
-        <TextView
-            android:id="@+id/tv2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
 
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/montserratmedium"
+                    android:gravity="center"
+                    android:text="Topics"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/yellow" />
 
-    <androidx.cardview.widget.CardView
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/outline_info_24" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#E85241A0"
-        app:cardCornerRadius="12dp">
-
-        <TextView
-            android:id="@+id/tv3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/yellow" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#E85241A0"
-        app:cardCornerRadius="12dp">
-
-        <TextView
-            android:id="@+id/tv4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/yellow" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#E85241A0"
-        app:cardCornerRadius="12dp">
-
-        <TextView
-            android:id="@+id/tv5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/yellow" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="30dp"
-        app:cardBackgroundColor="#E85241A0"
-        app:cardCornerRadius="12dp">
-
-        <TextView
-            android:id="@+id/tv6"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/someKindaGreen" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#E85241A0"
-        app:cardCornerRadius="12dp">
-
-        <TextView
-            android:id="@+id/tv7"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/someKindaGreen" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#E85241A0"
-        app:cardCornerRadius="12dp">
-
-        <TextView
-            android:id="@+id/tv8"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/someKindaGreen" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#E85241A0"
-        app:cardCornerRadius="12dp">
-
-        <TextView
-            android:id="@+id/tv9"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/someKindaGreen" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#E85241A0"
-        app:cardCornerRadius="12dp">
-
-        <TextView
-            android:id="@+id/tv10"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="4dp"
-            android:gravity="center_horizontal"
-            android:text="allergic"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/someKindaGreen" />
+        tools:listitem="@layout/item_vocab_list" />
 
 
 </LinearLayout>
