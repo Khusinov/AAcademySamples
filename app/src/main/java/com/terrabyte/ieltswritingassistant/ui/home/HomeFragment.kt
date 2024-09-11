@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.Uri.Builder
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -17,10 +16,11 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.terrabyte.ieltswritingassistant.R
 import com.terrabyte.ieltswritingassistant.databinding.FragmentHomeBinding
 import com.terrabyte.ieltswritingassistant.viewBinding
-import java.util.Locale
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -29,12 +29,35 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     lateinit var sharedPreferences: SharedPreferences
 
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         checkInternetConnection()
         setupUI()
-        admob()
+        setupObserver()
+    }
+
+    private fun setupObserver() {
+        val db = Firebase.firestore
+        db.collection("banners")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    Log.d("Galdi bi", "${document.id} => ${document.data}")
+
+
+                    val enabled = document.data["enabled"].toString().toBoolean()
+
+                    if (enabled) {
+                        binding.adView.visibility = View.VISIBLE
+                        admob()
+                    } else {
+                        binding.adView.visibility = View.GONE
+                    }
+
+                }
+            }.addOnFailureListener { exception ->
+                Log.w(TAG, "setupUI: Error getting documents.  ", exception)
+            }
     }
 
     private fun checkInternetConnection() {
